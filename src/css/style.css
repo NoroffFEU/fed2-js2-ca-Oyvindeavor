@@ -1,35 +1,43 @@
 @import url(_reset.css);
 
+/* Fonts */
+
+/* Helper Classes */
+.flex {display: flex;}
+.column {flex-direction: column;}.row {flex-direction: row;}
+.justify-center {justify-content: center;}
+.align-center {align-items: center;}
+.space-between {justify-content: space-between;}
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-bar {
-    background-color: #264653;
-    padding: 20px;
-  }
-  
-  .nav-bar a {
-    color: white;
-    text-decoration: none;
-    margin-right: 10px;
-  }
-  
-  h1 {
-    color: #333;
-  }
-  
-  /* Footer */
-  .footer-container {
-    background-color: #264653;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar {
+  background-color: #264653;
+  padding: 20px;
+}
+
+.nav-bar a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+h1 {
+  color: #333;
+}
+
+/* Footer */
+.footer-container {
+  background-color: #264653;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
