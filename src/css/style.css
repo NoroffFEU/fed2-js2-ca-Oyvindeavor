@@ -3,8 +3,8 @@
 /* Fonts */
 
 /* Helper Classes */
-.flex {display: flex;}
-.column {flex-direction: column;}.row {flex-direction: row;}
+.flex {display: flex;}.column {flex-direction: column;}
+.row {flex-direction: row;}
 .justify-center {justify-content: center;}
 .align-center {align-items: center;}
 .space-between {justify-content: space-between;}
@@ -13,6 +13,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background: linear-gradient(135deg, #264653, #2a9d8f);
 }
 
 .nav-bar {
@@ -30,6 +31,15 @@ h1 {
   color: #333;
 }
 
+/* Main Container */
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 80px;
+}
+
 /* Footer */
 .footer-container {
   background-color: #264653;
@@ -40,4 +50,88 @@ h1 {
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+/* Form Styling */
+.form {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 40px;
+  width: 100%;
+  max-width: 400px; /* Change this for form width */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form__title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #264653;
+}
+
+.form__group {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.form__label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #264653;
+}
+
+.form__input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.form__input:focus {
+  border-color: #2a9d8f;
+  outline: none;
+}
+
+.form__link {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #2a9d8f;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.form__link:hover {
+  color: #e76f51;
+}
+
+.form__button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2a9d8f;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form__button:hover {
+  background-color: #21867a;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .form {
+    padding: 35px;
+  }
+
+  .form__title {
+    font-size: 20px;
+  }
+
+  .form__button {
+    padding: 10px;
+  }
 }
