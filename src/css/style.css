@@ -121,6 +121,35 @@ h1 {
   background-color: #21867a;
 }
 
+/* Auth container styling */
+.auth-container {
+  background-color: #ffffff; 
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  text-align: center; 
+}
+
+.auth__title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #264653; 
+}
+
+.auth__link {
+  font-size: 16px;
+  color: #2a9d8f; 
+  text-decoration: none;
+  transition: color 0.3s;
+  margin: 0 5px; 
+}
+
+.auth__link:hover {
+  color: #e76f51; 
+}
+
 /* Responsive adjustments */
 @media (max-width: 480px) {
   .form {
