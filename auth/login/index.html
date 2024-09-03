@@ -15,22 +15,26 @@
         </div>
       </nav>
     </header>
-
-    <main>
-      <h1>Login</h1>
-      <form name="login">
-        <div>
-          <label for="email">Email</label>
-          <input id="email" type="email" name="email" required />
+    
+    <!-- Main container -->
+    <main class="main-container">
+      <!-- Login form -->
+      <form name="login" class="form form--login flex column align-center">
+        <h1 class="form__title">Login</h1>
+        <!-- Email input -->
+        <div class="form__group flex column align-start">
+          <label class="form__label" for="email">Email</label>
+          <input class="form__input" id="email" type="email" name="email" required placeholder="Email" />
         </div>
-
-        <div>
-          <label for="password">Password</label>
-          <input type="password" name="password" id="password" required />
+        <!-- Password input -->
+        <div class="form__group flex column align-start">
+          <label class="form__label" for="password">Password</label>
+          <input class="form__input" type="password" name="password" id="password" required placeholder="Password" />
         </div>
-
-        <a href="/auth/register/">Register</a>
-        <button type="button">Login</button>
+        <!-- Register link -->
+        <a href="/auth/register/" class="form__link">Register</a>
+        <!-- Login button -->
+        <button type="submit" class="form__button">Login</button>
       </form>
     </main>
 
