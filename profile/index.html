@@ -16,11 +16,65 @@
       </nav>
     </header>
 
-    <main>
-      <h1>Profile</h1>
-      <form name="updateProfile">
-        <button type="button">Update Profile</button>
+    <main class="profile">
+      <!-- Profile Banner -->
+      <div class="profile-banner">
+        <img
+          class="user-banner"
+          src="https://images.unsplash.com/photo-1484589065579-248aad0d8b13?q=80&w=3648&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="User Banner"
+          class="banner-img"
+        />
+      </div>
+
+      <!-- Profile Section -->
+      <div class="profile-details">
+        <!-- User Avatar -->
+        <img
+          src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww"
+          alt="User Avatar"
+          class="avatar-img"
+        />
+        <h1 class="username">Øyvind</h1>
+        <p class="user-bio">This is a short bio about the user. It gives a brief introduction or description.</p>
+      </div>
+
+      <!-- Update Profile Button -->
+      <form name="updateProfile" class="update-profile-form">
+        <button type="button" class="update-button" href="">Edit profile</button>
       </form>
+
+      <!-- User's Latest Posts -->
+      <section class="user-posts">
+        <h2>Latest Posts</h2>
+
+        <!-- Sort Options -->
+        <div class="sort-options">
+          <label for="sortPosts">Sort by:</label>
+          <select id="sortPosts" name="sortPosts">
+            <option value="latest">Latest</option>
+            <option value="oldest">Oldest</option>
+            <option value="mostLiked">Most Liked</option>
+            <option value="mostCommented">Most Commented</option>
+          </select>
+        </div>
+
+        <!-- Posts List -->
+        <div class="posts-list">
+          <!-- Example of a post item -->
+          <article class="post">
+            <h3 class="post-title">Post Title 1</h3>
+            <p class="post-content">This is a brief description or excerpt of the user's post content.</p>
+            <span class="post-date">Posted on: 2024-09-07</span>
+          </article>
+
+          <article class="post">
+            <h3 class="post-title">Post Title 2</h3>
+            <p class="post-content">This is another brief description or excerpt of the user's post content.</p>
+            <span class="post-date">Posted on: 2024-09-06</span>
+          </article>
+        </div>
+      </section>
     </main>
 
     <footer>
