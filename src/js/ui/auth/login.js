@@ -32,10 +32,10 @@ export async function onLogin(event) {
 
   try {
     const response = await login({ email, password });
-    console.log("Login successful:", response.data);
-    localStorage.setItem("token", response.data.token);
-    localStorage.setItem("user", JSON.stringify(response.data.user));
+    localStorage.setItem("token", response.data.accessToken);
+    localStorage.setItem("user", JSON.stringify(response.data));
     window.location.href = "/";
+    console.log("Login successful:", response.data);
   } catch (error) {
     console.error("Login error:", error.message);
     alert(`Login failed: ${error.message}`);
