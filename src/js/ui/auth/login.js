@@ -35,7 +35,7 @@ export async function onLogin(event) {
     localStorage.setItem("token", response.data.accessToken);
     localStorage.setItem("user", JSON.stringify(response.data));
     window.location.href = "/";
-    console.log("Login successful:", response.data);
+    console.log("Login successful:", response.data); // Remove after testing
   } catch (error) {
     console.error("Login error:", error.message);
     alert(`Login failed: ${error.message}`);
