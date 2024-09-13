@@ -11,18 +11,67 @@
     <header>
       <nav>
         <div class="nav-bar">
-          <a href="/">Noroff FED2 JS2 CA</a>
+          <a href="/">Homepage</a>
         </div>
       </nav>
     </header>
 
-    <main>
+    <main class="main-container">
       <img src="/images/noroff-logo.png" alt="Noroff Logo" />
       <h1>Home</h1>
       <a href="/profile/" id="myprofilelink">My Profile</a>
       <a href="/auth/login/">Login</a>
       <a href="/auth/register/">Register</a>
       <button type="button" id="logoutBtn">Logout</button>
+
+
+      <!-- Feed -->
+      <div class="feed">
+        <!-- Post -->
+        <div class="post">
+             <!-- Followers and Following -->
+      <div class="follow-section space-between">
+        <button type="button" class="follow-btn">Followers</button>
+        <button type="button" class="follow-btn">Following</button>
+        <a href="/post/create/">Create Post</a>
+      </div>
+
+       <!-- Sort By Section -->
+       <div class="sort-options">
+        <label for="sortBy">Sort By:</label>
+        <select id="sortBy">
+          <option value="newest">Newest</option>
+          <option value="oldest">Oldest</option>
+          <option value="mostLiked">Most Liked</option>
+        </select>
+      </div>
+
+      <div class="post">
+        <div class="avatar-big">
+        <img
+          class="avatar-img"
+          src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww"
+          alt="User Avatar"
+        />
+        <h2 class="post-title">Post Title 2</h2>
+        <p class="post-content">This is a brief content of the second post.</p>
+        <span class="post-date">Posted on: 2024-09-10</span>
+      </div>
+      <!-- Add more posts as needed -->
+    </div>
+        <div class="post">
+          <div class="avatar-big">
+          <img
+            class="avatar-img"
+            src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww"
+            alt="User Avatar"
+          />
+          <h2 class="post-title">Post Title 2</h2>
+          <p class="post-content">This is a brief content of the second post.</p>
+          <span class="post-date">Posted on: 2024-09-10</span>
+        </div>
+        <!-- Add more posts as needed -->
+      </div>
     </main>
 
     <footer>
