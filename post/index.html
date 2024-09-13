@@ -2,23 +2,69 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Post page</title>
+    <title>Post Page</title>
     <script type="module" src="/src/app.js"></script>
   </head>
-
   <body>
     <header>
       <nav>
         <div class="nav-bar">
-          <a href="/">Noroff FED2 JS2 CA</a>
+          <a href="/">Post page</a>
         </div>
       </nav>
     </header>
 
-    <main>
-      <h1>Post Page</h1>
+    <main class="main-container">
+      <!-- Avatar -->
+      <div class="avatar-big flex">
+        <img
+          class="avatar-img"
+          src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww"
+          alt="User Avatar"
+        />
+        <h2>Øyvind</h2>
+      </div>
+      <!-- Post -->
+      <div class="post">
+        <h2 class="post-title">Hello World!</h2>
+        <p class="post-content">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi culpa dicta ipsam, quod ipsa a rerum corporis quos vitae voluptatum explicabo enim, consectetur omnis eligendi qui!
+          Perferendis, error aspernatur? Explicabo.
+        </p>
+        <img src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww" alt="Post Image" />
+        <span class="post-date">Posted on: 2024-09-11</span>
+        <!-- Leave a comment -->
+        <div class="leave-comment">
+          <form name="leaveComment" class="comment-form">
+            <textarea name="comment" id="comment" placeholder="Leave a comment"></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Comments -->
+      <h2>Comments</h2>
+      <div class="comments">
+        <!--Avatar of the user -->
+        <div class="avatar-small flex">
+          <img
+            class="avatar-img"
+            src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww"
+            alt="User Avatar"
+          />
+          <h2>Øyvind</h2>
+        </div>
+
+        <!-- Comment -->
+        <div class="comment">
+          <p class="comment-content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi culpa dicta ipsam, quod ipsa a rerum corporis quos vitae voluptatum explicabo enim, consectetur omnis eligendi qui!
+            Perferendis, error aspernatur? Explicabo.
+          </p>
+          <span class="comment-date">Posted on: 2024-09-11</span>
+        </div>
+      </div>
     </main>
 
     <footer>

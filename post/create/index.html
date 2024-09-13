@@ -16,11 +16,33 @@
       </nav>
     </header>
 
-    <main>
+    <main class="create_post">
       <h1>Create Post</h1>
-      <form name="createPost">
-        <button type="button">Create Post</button>
-      </form>
+      <!-- Form container -->
+      <div class="post-container flex column">
+        <img src="/images/noroff-logo.png" alt="Noroff Logo" />
+        <!-- Form -->
+        <form name="createPost" id="createPostForm" class="flex column">
+          <!-- Title -->
+          <label for="postTitle">Title</label>
+          <input id="postTitle" type="text" name="title" placeholder="Title" />
+          <!-- Content -->
+          <label for="postContent">Post Content</label>
+          <textarea id="postContent" name="body" placeholder="Enter your post content"></textarea>
+          <!-- Tags -->
+          <div class="tags-container flex">
+            <label>Tags</label>
+            <label class="checkbox-tag"> <input type="checkbox" id="checkbox_tag1" name="tags" value="Politics" />Politics </label>
+            <label class="checkbox-tag"> <input type="checkbox" id="checkbox_tag2" name="tags" value="Gaming" />Gaming </label>
+            <label class="checkbox-tag"> <input type="checkbox" id="checkbox_tag3" name="tags" value="Food" />Food </label>
+          </div>
+          <!-- Image -->
+          <label for="postImage">Post Image</label>
+          <input type="url" id="postImage" name="media" placeholder="Enter image URL" />
+          <!-- Submit button -->
+          <button type="submit" id="createPostButton">Create Post</button>
+        </form>
+      </div>
     </main>
 
     <footer>
