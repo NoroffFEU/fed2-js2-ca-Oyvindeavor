@@ -3,11 +3,24 @@
 /* Fonts */
 
 /* Helper Classes */
-.flex {display: flex;}.column {flex-direction: column;}
-.row {flex-direction: row;}
-.justify-center {justify-content: center;}
-.align-center {align-items: center;}
-.space-between {justify-content: space-between;}
+.flex {
+  display: flex;
+}
+.column {
+  flex-direction: column;
+}
+.row {
+  flex-direction: row;
+}
+.justify-center {
+  justify-content: center;
+}
+.align-center {
+  align-items: center;
+}
+.space-between {
+  justify-content: space-between;
+}
 
 body {
   font-family: Arial, sans-serif;
@@ -33,11 +46,10 @@ h1 {
 
 /* Main Container */
 .main-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
   padding: 20px;
-  margin-top: 80px;
+  font-family: Arial, sans-serif;
 }
 
 /* Footer */
@@ -46,10 +58,6 @@ h1 {
   color: white;
   padding: 20px;
   text-align: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 
 /* Form Styling */
@@ -123,33 +131,32 @@ h1 {
 
 /* Auth container styling */
 .auth-container {
-  background-color: #ffffff; 
+  background-color: #ffffff;
   border-radius: 10px;
   padding: 30px;
   max-width: 400px;
   width: 100%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-  text-align: center; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .auth__title {
   margin-bottom: 20px;
   font-size: 24px;
-  color: #264653; 
+  color: #264653;
 }
 
 .auth__link {
   font-size: 16px;
-  color: #2a9d8f; 
+  color: #2a9d8f;
   text-decoration: none;
   transition: color 0.3s;
-  margin: 0 5px; 
+  margin: 0 5px;
 }
 
 .auth__link:hover {
-  color: #e76f51; 
+  color: #e76f51;
 }
-
 
 /* Main button styles */
 button {
@@ -167,6 +174,43 @@ button:hover {
   background-color: #21867a;
 }
 
+/* Avatar styling */
+
+/** Avatar BIG to be used on profiles etc **/
+.avatar-big {
+  background-color: whitesmoke;
+}
+
+/* Avatar SMALL to be used on comments */
+.avatar-small {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.avatar-small > .avatar-img {
+  width: 60px;
+  height: 60px;
+}
+
+/* Post styling */
+.post img {
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.avatar-big,
+.avatar-small {
+  padding: 10px;
+}
+
+/* comments styling */
+.comments {
+  margin-top: 20px;
+  background-color: whitesmoke;
+  padding: 20px;
+}
 
 /* Profile Page */
 .profile {
@@ -220,8 +264,6 @@ button:hover {
   margin-top: 10px;
 }
 
-
-
 .user-posts {
   margin-top: 30px;
 }
@@ -263,7 +305,184 @@ button:hover {
   color: #888;
 }
 
+.home_page img {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
 
+.navigation {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.navigation a,
+#logoutBtn {
+  padding: 10px 15px;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.navigation a:hover,
+#logoutBtn:hover {
+  background-color: #e0e0e0;
+}
+
+.sort-options {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.sort-options select {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.follow-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.follow-btn {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.follow-btn:hover {
+  background-color: #0056b3;
+}
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.post {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-title {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.post-content {
+  margin: 0 0 10px;
+  color: #444;
+}
+
+.post-date {
+  font-size: 12px;
+  color: #888;
+}
+
+/* Create Post Page */
+/* Create Post Page */
+.create_post {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.post-container {
+  background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-container img {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+.post-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.post-container input[type="text"],
+.post-container textarea,
+.post-container input[type="url"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.post-container textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.post-container button {
+  align-self: flex-end;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.post-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Tags and Checkbox Styling */
+.post-container .checkbox-tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.checkbox-tag input[type="checkbox"] {
+  display: none; /* Hide actual checkbox */
+}
+
+.checkbox-tag label {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkbox-tag label:hover {
+  background-color: #e0e0e0;
+}
+
+.checkbox-tag input[type="checkbox"]:checked + label {
+  background-color: #007bff;
+  color: white;
+}
 
 /* Responsive adjustments */
 @media (max-width: 480px) {
