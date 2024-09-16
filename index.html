@@ -17,60 +17,92 @@
     </header>
 
     <main class="main-container">
-      <img src="/images/noroff-logo.png" alt="Noroff Logo" />
-      <h1>Home</h1>
-      <a href="/profile/" id="myprofilelink">My Profile</a>
-      <a href="/auth/login/">Login</a>
-      <a href="/auth/register/">Register</a>
-      <button type="button" id="logoutBtn">Logout</button>
-
-
-      <!-- Feed -->
-      <div class="feed">
-        <!-- Post -->
-        <div class="post">
-             <!-- Followers and Following -->
-      <div class="follow-section space-between">
-        <button type="button" class="follow-btn">Followers</button>
-        <button type="button" class="follow-btn">Following</button>
-        <a href="/post/create/">Create Post</a>
-      </div>
-
-       <!-- Sort By Section -->
-       <div class="sort-options">
-        <label for="sortBy">Sort By:</label>
-        <select id="sortBy">
-          <option value="newest">Newest</option>
-          <option value="oldest">Oldest</option>
-          <option value="mostLiked">Most Liked</option>
-        </select>
-      </div>
-
-      <div class="post">
-        <div class="avatar-big">
+      <!-- Avatar -->
+      <div class="avatar-big flex">
         <img
-          class="avatar-img"
           src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww"
           alt="User Avatar"
         />
-        <h2 class="post-title">Post Title 2</h2>
-        <p class="post-content">This is a brief content of the second post.</p>
-        <span class="post-date">Posted on: 2024-09-10</span>
+        <h2 id="username">Øyvind</h2>
       </div>
-      <!-- Add more posts as needed -->
-    </div>
-        <div class="post">
-          <div class="avatar-big">
-          <img
-            class="avatar-img"
-            src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww"
-            alt="User Avatar"
-          />
-          <h2 class="post-title">Post Title 2</h2>
-          <p class="post-content">This is a brief content of the second post.</p>
-          <span class="post-date">Posted on: 2024-09-10</span>
+      <!-- Navigation -->
+      <nav class="navigation">
+        <a href="/profile/" id="myprofilelink">My Profile</a>
+        <button type="button" id="logoutBtn">Logout</button>
+      </nav>
+      <!-- Search -->
+      <input search="search" id="search" placeholder="Search" />
+      <!-- Feed -->
+      <div class="feed">
+        <!-- Followers and Following -->
+        <div class="follow-section">
+          <button type="button" class="follow-btn">Followers</button>
+          <button type="button" class="follow-btn">Following</button>
+          <a href="/post/create/">Create Post</a>
         </div>
-        <!-- Add more posts as needed -->
+        <!-- Sort By Section -->
+        <div class="sort-options">
+          <label for="sortBy">Sort By:</label>
+          <select id="sortBy">
+            <option value="newest">Newest</option>
+            <option value="oldest">Oldest</option>
+            <option value="mostLiked">Most Liked</option>
+          </select>
+        </div>
+
+        <div class="filter-options">
+          <label for="filterBy">Filter By:</label>
+          <select id="filterBy">
+            <option value="all">All</option>
+            <option value="text">Text</option>
+            <option value="image">Image</option>
+          </select>
+        </div>
+
+        <!-- Post content -->
+        <div class="post-content">
+          <!-- Avatar user post -->
+          <div class="avatar-small">
+            <a href="#">
+              <img
+                class="avatar-img"
+                src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww"
+                alt="User Avatar"
+              />
+              <span class="username">Øyvind</span>
+            </a>
+          </div>
+          <!-- Anchor to profile -->
+          <div class="post-content-container">
+            <a href="#">
+              <h2 class="post-title">Hello World!</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi culpa dicta ipsam, quod ipsa a rerum corporis quos vitae voluptatum explicabo enim, consectetur omnis eligendi qui!
+                Perferendis, error aspernatur? Explicabo.
+              </p>
+              <img
+                src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww"
+                alt="Post Image"
+              />
+            </a>
+          </div>
+
+          <!-- React Container -->
+          <div class="react-container">
+            <!-- Emoji Reaction Buttons -->
+            <div class="emoji-reactions">
+              <button type="button" class="emoji-btn" data-emoji="thumbsUp">👍</button>
+              <span class="emoji-count" id="thumbsUp-count">0</span>
+            </div>
+            <span class="post-date">Posted on: 2024-09-11</span>
+          </div>
+        </div>
+      </div>
+      <!-- Feed End -->
+      <!-- Pagination -->
+      <div class="pagination">
+        <button type="button" class="pagination-btn">Previous</button>
+        <button type="button" class="pagination-btn">Next</button>
       </div>
     </main>
 
