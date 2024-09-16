@@ -15,11 +15,11 @@ export function getRegisterFormData() {
   const bannerUrl = document.querySelector("#banner").value;
   const avatarUrl = document.querySelector("#avatar").value;
 
-  const formData = {name,email,password,bio,};
+  const formData = { name, email, password, bio };
   if (bannerUrl) {
     formData.banner = { url: bannerUrl };
   }
-  
+
   if (avatarUrl) {
     formData.avatar = { url: avatarUrl };
   }
