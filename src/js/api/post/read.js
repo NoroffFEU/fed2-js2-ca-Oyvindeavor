@@ -16,7 +16,7 @@ import { API_SOCIAL_PROFILES } from "../constants";
  * ...
 */
 export async function readPost(id) {
-    const url = `${API_SOCIAL_POSTS}/${id}`;
+  const url = `${API_SOCIAL_POSTS}/${id}?_author=true&_comments=true&_reactions=true`;
   try {
     const response = await fetch(url, {
       method: "GET",
@@ -59,8 +59,9 @@ export async function readPost(id) {
  *   .then(data => console.log(data))
  *   .catch(error => console.error(error));
  */
-export async function readPosts(limit = 12, page = 1, tag = []) {
-    const url = `${API_SOCIAL_POSTS}?_tag=${tag}&limit=${limit}&page=${page}&_author=true`;
+export async function readPosts(limit = 12, page = 1, tag) {
+  const url = `${API_SOCIAL_POSTS}?_tag=${tag}&limit=${limit}&page=${page}&_author=true`;
+
   try {
     const response = await fetch(url, {
       method: "GET",
@@ -88,7 +89,6 @@ export async function readPosts(limit = 12, page = 1, tag = []) {
  */
 export async function readPostsByUser(username, limit = 12, page = 1, tag) {
   const url = `${API_SOCIAL_PROFILES}/${username}/posts?limit=${limit}&page=${page}${tag ? `&tag=${encodeURIComponent(tag)}` : ""}`;
-
   try {
     const response = await fetch(url, {
       method: "GET",
