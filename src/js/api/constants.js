@@ -16,6 +16,8 @@ export const API_SOCIAL = `${API_BASE}/social`;
 
 export const API_SOCIAL_POSTS = `${API_SOCIAL}/posts`;
 
+export const API_SOCIAL_POSTS_FOLLOWING = `${API_SOCIAL_POSTS}/following`;
+
 export const API_SOCIAL_POSTS_SEARCH = `${API_SOCIAL_POSTS}/search`;
 
 export const API_SOCIAL_PROFILES = `${API_SOCIAL}/profiles`;
