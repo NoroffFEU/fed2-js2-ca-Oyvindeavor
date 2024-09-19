@@ -1,10 +1,10 @@
 import { onRegister } from "../../ui/auth/register";
 import { checkIfPageReload } from "../../utilities/checkIfPageReload";
 
-checkIfPageReload(); // Remove after testing
-const form = document.forms.register;
+function init() {
+  checkIfPageReload(); // Remove after testing
+  const form = document.forms.register;
+  form.addEventListener("submit", onRegister);
+}
 
-form.addEventListener("submit", onRegister);
-
-
-
+init();
