@@ -8,8 +8,9 @@
   </head>
 
   <body>
+    <!-- Global Site Header -->
     <header>
-      <nav>
+      <nav aria-label="Main Navigation">
         <div class="nav-bar">
           <a href="/">Homepage</a>
         </div>
@@ -17,29 +18,38 @@
     </header>
 
     <main class="main-container">
-      <!-- Avatar -->
-      <div class="avatar-big flex">
-        <img
-          src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww"
-          alt="User Avatar"
-        />
-        <h2 id="username">Øyvind</h2>
-      </div>
-      <!-- Navigation -->
-      <nav class="navigation">
-        <a href="/profile/" id="myprofilelink">My Profile</a>
-        <button type="button" id="logoutBtn">Logout</button>
-      </nav>
-      <!-- Search -->
-      <input search="search" id="search" placeholder="Search" />
-      <!-- Feed -->
-      <div class="feed">
+      <!-- User Profile Section -->
+      <section class="user-profile" aria-label="User Profile">
+        <div class="avatar-big">
+          <img
+            src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww"
+            alt="User Avatar"
+          />
+          <h1 class="username">Øyvind</h1>
+        </div>
+        <!-- Navigation for Profile Links -->
+        <nav class="navigation" aria-label="User Navigation">
+          <a href="/profile/" id="myprofilelink">My Profile</a>
+          <button type="button" id="logoutBtn">Logout</button>
+        </nav>
+      </section>
+
+      <!-- Search Section -->
+      <section aria-label="Search Section">
+        <label for="search">Search:</label>
+        <input type="text" id="search" placeholder="Search" />
+      </section>
+
+      <!-- Feed Section -->
+      <section class="feed" aria-label="Post Feed">
+        
         <!-- Followers and Following -->
         <div class="follow-section">
           <button type="button" class="follow-btn">Followers</button>
           <button type="button" class="follow-btn">Following</button>
           <a href="/post/create/">Create Post</a>
         </div>
+
         <!-- Sort By Section -->
         <div class="sort-options">
           <label for="sortBy">Sort By:</label>
@@ -50,30 +60,27 @@
           </select>
         </div>
 
-        <div class="filter-options">
-          <label for="filterBy">Filter By:</label>
-          <select id="filterBy">
-            <option value="all">All</option>
-            <option value="text">Text</option>
-            <option value="image">Image</option>
-          </select>
-        </div>
+        <!-- Spinner -->
+        <div class="spinner"></div>
 
-        <!-- Post content -->
-        <div class="post-content">
+        <!-- Post Content -->
+        <article class="post-content">
           <!-- Avatar user post -->
-          <div class="avatar-small">
+          <header class="avatar-small">
             <a href="#">
               <img
-                class="avatar-img"
+                
                 src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww"
                 alt="User Avatar"
               />
               <span class="username">Øyvind</span>
             </a>
-          </div>
-          <!-- Anchor to profile -->
-          <div class="post-content-container">
+            <div class="time-container">
+              <time class="post-date" datetime="2024-09-11">Posted on: September 11, 2024</time>
+            </div>
+          </header>
+
+          <section class="post-content-container">
             <a href="#">
               <h2 class="post-title">Hello World!</h2>
               <p>
@@ -81,31 +88,35 @@
                 Perferendis, error aspernatur? Explicabo.
               </p>
               <img
+              class="post-img"
                 src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww"
                 alt="Post Image"
+                
               />
             </a>
-          </div>
+          </section>
 
-          <!-- React Container -->
-          <div class="react-container">
-            <!-- Emoji Reaction Buttons -->
-            <div class="emoji-reactions">
-              <button type="button" class="emoji-btn" data-emoji="thumbsUp">👍</button>
-              <span class="emoji-count" id="thumbsUp-count">0</span>
+          <footer>
+            <!-- React Container -->
+            <div class="react-container">
+              <div class="emoji-container">
+                <button type="button" class="emoji-btn" data-emoji="thumbsUp" aria-label="Like post">👍</button>
+                <span class="emoji-count" id="thumbsUp-count">0</span>
+              </div>
             </div>
-            <span class="post-date">Posted on: 2024-09-11</span>
-          </div>
-        </div>
-      </div>
+          </footer>
+        </article>
+      </section>
       <!-- Feed End -->
-      <!-- Pagination -->
-      <div class="pagination">
+
+      <!-- Pagination Section -->
+      <nav class="pagination" aria-label="Pagination Navigation">
         <button type="button" class="pagination-btn">Previous</button>
         <button type="button" class="pagination-btn">Next</button>
-      </div>
+      </nav>
     </main>
 
+    <!-- Global Site Footer -->
     <footer>
       <div class="footer-container">
         <p>&copy; Social media application</p>
