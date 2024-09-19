@@ -8,8 +8,9 @@
   </head>
 
   <body>
+    <!-- Global Site Header -->
     <header>
-      <nav>
+      <nav aria-label="Main Navigation">
         <div class="nav-bar">
           <a href="/">Profile</a>
         </div>
@@ -17,18 +18,18 @@
     </header>
 
     <main class="profile">
-      <!-- Profile Banner -->
-      <div class="profile-banner">
+      <!-- Profile Banner Section -->
+      <section class="profile-banner" aria-label="Profile Banner">
         <img
           class="user-banner"
           src="https://images.unsplash.com/photo-1484589065579-248aad0d8b13?q=80&w=3648&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="User Banner"
           class="banner-img"
         />
-      </div>
+      </section>
 
-      <!-- Profile Section -->
-      <div class="profile-details">
+      <!-- Profile Details Section -->
+      <section class="profile-details" aria-label="Profile Information">
         <!-- User Avatar -->
         <img
           src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww"
@@ -37,15 +38,15 @@
         />
         <h1 class="username">Øyvind</h1>
         <p class="user-bio">This is a short bio about the user. It gives a brief introduction or description.</p>
-      </div>
 
-      <!-- Update Profile Button -->
-      <form name="updateProfile" class="update-profile-form">
-        <button type="button" class="update-button" href="">Edit profile</button>
-      </form>
+        <!-- Update Profile Button -->
+        <form name="updateProfile" class="update-profile-form" aria-label="Update Profile Form">
+          <button type="button" class="update-button">Edit Profile</button>
+        </form>
+      </section>
 
-      <!-- User's Latest Posts -->
-      <section class="user-posts">
+      <!-- User's Latest Posts Section -->
+      <section class="user-posts" aria-label="User's Latest Posts">
         <!-- Sort Options -->
         <div class="sort-options">
           <label for="sortPosts">Sort by:</label>
@@ -61,20 +62,21 @@
         <div class="posts-list">
           <!-- Example of a post item -->
           <article class="post">
-            <h3 class="post-title">Post Title 1</h3>
+            <h2 class="post-title">Post Title 1</h2>
             <p class="post-content">This is a brief description or excerpt of the user's post content.</p>
-            <span class="post-date">Posted on: 2024-09-07</span>
+            <time class="post-date" datetime="2024-09-07">Posted on: September 7, 2024</time>
           </article>
 
           <article class="post">
-            <h3 class="post-title">Post Title 2</h3>
+            <h2 class="post-title">Post Title 2</h2>
             <p class="post-content">This is another brief description or excerpt of the user's post content.</p>
-            <span class="post-date">Posted on: 2024-09-06</span>
+            <time class="post-date" datetime="2024-09-06">Posted on: September 6, 2024</time>
           </article>
         </div>
       </section>
     </main>
 
+    <!-- Global Site Footer -->
     <footer>
       <div class="footer-container">
         <p>&copy; Social media application</p>
