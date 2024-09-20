@@ -3,7 +3,7 @@ import { readProfile } from "../../api/profile/read";
 /**
  * @description Gets the username of the logged in user from local storage.
  * @returns {string} - The username of the logged in user.
- * @example 
+ * @example
  * // Example usage:
  * const username = getLoggedInUserName();
  * console.log(username);
@@ -24,7 +24,7 @@ export function getLoggedInUserName() {
  * console.log(getUser);
  * // Output:
  * {username: "test", avatar: "https://example.com/image.jpg", banner: "https://example.com/banner.jpg", bio: "This is a test bio."}
-    */
+ */
 export async function getLoggedInUser() {
   const username = getLoggedInUserName();
   const profile = await readProfile(username);

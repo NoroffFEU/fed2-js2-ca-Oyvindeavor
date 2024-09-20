@@ -6,70 +6,109 @@
     <title>Post Page</title>
     <script type="module" src="/src/app.js"></script>
   </head>
+
   <body>
+    <!-- Global Site Header -->
     <header>
-      <nav>
+      <nav aria-label="Main Navigation">
         <div class="nav-bar">
-          <a href="/">Post page</a>
+          <a href="/">Post Page</a>
         </div>
       </nav>
     </header>
 
     <main class="main-container">
-      <!-- Avatar -->
-      <div class="avatar-big flex">
-        <img
-          class="avatar-img"
-          src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww"
-          alt="User Avatar"
-        />
-        <h2>Øyvind</h2>
-      </div>
-      <!-- Post -->
-      <div class="post">
-        <h2 class="post-title">Hello World!</h2>
-        <p class="post-content">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi culpa dicta ipsam, quod ipsa a rerum corporis quos vitae voluptatum explicabo enim, consectetur omnis eligendi qui!
-          Perferendis, error aspernatur? Explicabo.
-        </p>
-        <img src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww" alt="Post Image" />
-        <span class="post-date">Posted on: 2024-09-11</span>
-        <!-- Leave a comment -->
-        <div class="leave-comment">
-          <form name="leaveComment" class="comment-form">
-            <textarea name="comment" id="comment" placeholder="Leave a comment"></textarea>
-            <button type="submit">Submit</button>
-          </form>
-        </div>
-      </div>
+      <!-- Feed -->
+      <article class="feed">
 
-      <!-- Comments -->
-      <h2>Comments</h2>
-      <div class="comments">
-        <!--Avatar of the user -->
-        <div class="avatar-small flex">
-          <img
-            class="avatar-img"
-            src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww"
-            alt="User Avatar"
-          />
-          <h2>Øyvind</h2>
-        </div>
+        <div class="spinner"></div>
+        <!-- Post content -->
+        <header class="avatar-small">
+          <a href="#">
+            <img
+              class="avatar-img"
+              src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww"
+              alt="User Avatar"
+            />
+            <h1 class="username">Øyvind</h1>
+          </a>
 
-        <!-- Comment -->
-        <div class="comment">
-          <p class="comment-content">
+          <div class="time-container">
+            <time class="post-date" datetime="2024-09-11">Posted on: September 11, 2024</time>
+          </div>
+        </header>
+
+        <section class="post-content-container">
+          <h2 class="post-title">Hello World!</h2>
+          <p class="post-body">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi culpa dicta ipsam, quod ipsa a rerum corporis quos vitae voluptatum explicabo enim, consectetur omnis eligendi qui!
             Perferendis, error aspernatur? Explicabo.
           </p>
-          <span class="comment-date">Posted on: 2024-09-11</span>
-        </div>
-      </div>
-    </main>
+          <img
+            src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww"
+            alt="Post Image"
+            class="post-img"
+          />
+        </section>
 
+        <footer>
+          <!-- React Container -->
+          <div class="react-container">
+            <div class="emoji-container">
+              <button type="button" class="emoji-btn" data-emoji="thumbsUp" aria-label="Like post">👍</button>
+              <span class="emoji-count" id="thumbsUp-count">0</span>
+            </div>
+          </div>
+        </footer>
+
+        <!-- Add comment form -->
+        <form class="add-comment-form" aria-label="Add a comment">
+          <input type="text" placeholder="Add a comment..." class="comment-input" aria-label="Comment input" />
+          <button type="submit" class="comment-btn">Post</button>
+        </form>
+      </article>
+
+      <!-- Comments Section -->
+      <section class="comments" aria-label="Comments Section">
+        <article class="comment-content">
+          <header class="avatar-small">
+            <a href="#">
+              <img
+                class="avatar-img"
+                src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww"
+                alt="User Avatar"
+              />
+              <span class="username">Øyvind</span>
+            </a>
+
+            <div class="time-container">
+              <time class="post-date" datetime="2024-09-11">Posted on: September 11, 2024</time>
+            </div>
+          </header>
+
+          <div class="comment-body">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi culpa dicta ipsam, quod ipsa a rerum corporis quos vitae voluptatum explicabo enim, consectetur omnis eligendi qui!
+              Perferendis, error aspernatur? Explicabo.
+            </p>
+          </div>
+          <footer class="react-container">
+            <div class="emoji-container">
+              <button type="button" class="emoji-btn" data-emoji="thumbsUp" aria-label="Like comment">👍</button>
+              <span class="emoji-count" id="thumbsUp-count">0</span>
+            </div>
+            <div class="reply-container">
+              <button type="button" class="reply-btn">Reply</button>
+            </div>
+          </footer>
+        </article>
+      </section>
+      <!-- Dynamically added comments  -->
+    </main>
+    <!-- Global Site Footer -->
     <footer>
       <div class="footer-container">
-        <p>&copy; Social media application</p>
+        <p>&copy; Social Media Application</p>
       </div>
     </footer>
   </body>

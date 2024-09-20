@@ -1,4 +1,8 @@
 import { checkIfPageReload } from "../../utilities/checkIfPageReload";
 
-alert("Auth Index Page");
-checkIfPageReload(); // Remove after testing
+function init() {
+  alert("Auth Index Page");
+  checkIfPageReload();
+}
+
+init();
