@@ -199,3 +199,4 @@ export function appendComments(post) {
     commentsSection.appendChild(commentContent);
   });
 }
+
