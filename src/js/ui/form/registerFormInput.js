@@ -8,12 +8,12 @@
  * // Output: { name: "", email: "", password: "", bio: "", banner: { url: "" }, avatar: { url: "" } }
  */
 export function getRegisterFormData() {
-  const name = document.querySelector("#name").value;
-  const email = document.querySelector("#email").value;
-  const password = document.querySelector("#password").value;
-  const bio = document.querySelector("#bio").value;
-  const bannerUrl = document.querySelector("#banner").value;
-  const avatarUrl = document.querySelector("#avatar").value;
+  const name = document.querySelector("#name").value.trim();
+  const email = document.querySelector("#email").value.trim();
+  const password = document.querySelector("#password").value.trim();
+  const bio = document.querySelector("#bio").value.trim();
+  const bannerUrl = document.querySelector("#banner").value.trim();
+  const avatarUrl = document.querySelector("#avatar").value.trim();
 
   const formData = { name, email, password, bio };
   if (bannerUrl) {
