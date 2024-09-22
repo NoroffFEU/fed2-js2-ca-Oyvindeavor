@@ -19,40 +19,46 @@
     <!-- Main container -->
     <main class="main-container">
       <!-- Register form -->
-      <form name="register" class="form form--register flex column align-center" autocomplete="off">
+      <form name="register" class="form form--register" autocomplete="off">
         <h1 class="form__title">Register</h1>
         <!-- Name input -->
-        <div class="form__group flex column align-start">
+        <div class="form__group column">
           <label class="form__label" for="name">Name</label>
           <input class="form__input" id="name" type="text" name="name" required maxlength="20" pattern="^[\w]+$" title="Please enter a username using only letters and numbers" autocomplete="off"/>
+          <span class="error-message" id="registerNameError">Error name must be ......</span>
         </div>
         <!-- Email input -->
-        <div class="form__group flex column align-start">
+        <div class="form__group">
           <label class="form__label" for="email">Email</label>
           <input class="form__input" id="email" type="email" name="email" required pattern="^[\w\-.]+@(stud\.)?noroff\.no$" title="Please enter a valid noroff.no or stud.noroff.no address" autocomplete="off"/>
+          <span class="error-message" id="registerEmailError">Error name must be ......</span>
         </div>
         <!-- Password input -->
-        <div class="form__group flex column align-start">
+        <div class="form__group">
           <label class="form__label" for="password">Password</label>
           <input class="form__input" type="password" name="password" id="password" required minlength="8" />
+          <span class="error-message" id="registerPasswordError">Error name must be ......</span>
         </div>
 
         <!-- Bio input -->
-        <div class="form__group flex column align-start">
+        <div class="form__group">
           <label class="form__label" for="bio">Bio</label>
-          <textarea class="form__input" type="text" name="bio" id="bio" ></textarea>
+          <textarea class="form__input" type="text" name="bio" id="bio" maxlength="159" ></textarea>
+          <span class="error-message" id="registerBioError">Error name must be ......</span>
         </div>
 
         <!--Banner input -->
-        <div class="form__group flex column align-start">
+        <div class="form__group">
           <label class="form__label" for="banner">Banner</label>
           <input class="form__input" type="url" name="banner" id="banner"  />
+          <span class="error-message" id="registerBannerError">Error name must be ......</span>
         </div>
 
         <!-- Avatar Input -->
-        <div class="form__group flex column align-start">
+        <div class="form__group">
           <label class="form__label" for="avatar">Avatar</label>
-          <input class="form__input" type="url" name="avatar" id="avatar"  />
+          <input class="form__input" type="url" name="avatar" id="avatar"   />
+          <span class="error-message" id="registerAvatarImgError">Error name must be ......</span>
         </div>
 
         <!-- Login link -->
