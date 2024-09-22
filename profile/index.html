@@ -30,19 +30,37 @@
 
       <!-- Profile Details Section -->
       <section class="profile-details" aria-label="Profile Information">
+        <div class="edit-logout">
+          <button type="button" class="logout-button" id="logoutBtn">Logout</button>
+          <button type="button" class="edit-button">Edit Profile</button>
+        </div>
         <!-- User Avatar -->
         <img
           src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww"
           alt="User Avatar"
-          class="avatar-img"
+          class="avatar-big"
         />
-        <h1 class="username">Øyvind</h1>
-        <p class="user-bio">This is a short bio about the user. It gives a brief introduction or description.</p>
 
+        <!-- Hidden by default -->
+        <div class="edit-profile-img">
+          <input type="url" id="profileImg" name="profileImg" placeholder="Enter a URL for your profile image" />
+          
+        </div>
+        <!---->
+
+        <h1 class="username">Øyvind</h1>
+        
+        
+        <p class="user-bio">This is a short bio about the user. It gives a brief introduction or description.</p>
+        <!-- Hidden by default -->
+        <div class="edit-bio">
+          <textarea id="bio" name="bio" placeholder="Enter a short bio about yourself" maxlength="159"></textarea>
+        </div>
         <!-- Update Profile Button -->
         <form name="updateProfile" class="update-profile-form" aria-label="Update Profile Form">
           <button type="button" class="update-button">Edit Profile</button>
         </form>
+
       </section>
 
       <!-- User's Latest Posts Section -->
@@ -56,15 +74,22 @@
             <option value="mostLiked">Most Liked</option>
             <option value="mostCommented">Most Commented</option>
           </select>
+
+          <h2>Posts by you</h2>
         </div>
+
+       
 
         <!-- Posts List -->
         <div class="posts-list">
           <!-- Example of a post item -->
-          <article class="post">
+          <article class="post profile">
             <h2 class="post-title">Post Title 1</h2>
             <p class="post-content">This is a brief description or excerpt of the user's post content.</p>
+            <img src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww" alt="Post Image" class="post-img" />
             <time class="post-date" datetime="2024-09-07">Posted on: September 7, 2024</time>
+            <button>Delete</button>
+            <button>Edit</button>
           </article>
 
           <article class="post">
