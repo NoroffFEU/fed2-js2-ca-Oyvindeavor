@@ -44,6 +44,11 @@ body {
   text-align: center;
 }
 
+.search-sort-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
 
 
 
@@ -170,6 +175,7 @@ button:hover {
   gap: 10px;
   margin-bottom: 15px;
   border-bottom: 1px solid #ddd;
+
 }
 
 .follow-btn {
@@ -187,11 +193,11 @@ button:hover {
   background-color: #0056b3;
 }
 
-.sort-options {
+.sort-options .sort-options label {
   display: flex;
   gap: 10px;
-  margin-bottom: 15px;
   border-bottom: 1px solid #ddd;
+  align-items: center;
 }
 
 .sort-options label {
@@ -225,6 +231,7 @@ button:hover {
   padding: 20px;
   color: #444;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 
 .post-content-container {
@@ -323,6 +330,7 @@ button:hover {
   margin-top: 10px;
 }
 
+
 /* ------------------- */
 
 /* Comment content */
@@ -399,6 +407,18 @@ button:hover {
   background-color: whitesmoke;
 }
 
+.user-profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-profile {
+  background-color: #fff;
+}
+
 .user-info {
   flex-grow: 1;
 }
@@ -414,6 +434,25 @@ button:hover {
 
 .update-profile-form {
   margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.update-profile-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.update-profile-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 
@@ -433,6 +472,26 @@ button:hover {
   margin-bottom: 20px;
   justify-content: center;
 }
+
+/** Comments and Likes Styling for the profile page **/
+.comments-likes {
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  padding: 10px 20px; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+
+}
+
+.comments-likes span {
+  margin-right: 10px; 
+  font-size: 16px; 
+  color: #333; 
+}
+
+
+
 
 /* ------------------- */
 
