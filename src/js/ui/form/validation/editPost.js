@@ -1,9 +1,11 @@
 import { displayErrorMessage, hideErrorMessage } from "./errorMessage";
 
 export function setupPostEditListeners() {
+  // input listeners for the post title, body, and image
   addTitleInputListener();
   addBodyInputListener();
   addImageInputListener();
+  // blur events for the post title, body, and image
   addTitleBlurEvent();
   addBodyBlurEvent();
   addImageBlurEvent();
