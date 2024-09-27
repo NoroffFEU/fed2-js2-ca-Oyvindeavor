@@ -505,19 +505,6 @@ button:hover {
 /* Form styles */
 
 /* Form Styling */
-.form {
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 40px;
-  width: 100%;
-  max-width: 600px; 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 /* Error message */
 .error-message {
   display: flex;
@@ -621,7 +608,7 @@ button:hover {
 
 .post-container {
   background-color: whitesmoke;
-  padding: 20px;
+  padding: 40px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
