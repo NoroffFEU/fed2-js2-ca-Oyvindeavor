@@ -8,7 +8,5 @@ export async function onUpdatePost(event) {
   console.log("id", id);
   const { title, body, media, tags } = getEditPostInputValues();
   await updatePost(id, { title, body, tags, media });
-
-  window.history.pushState({}, null, `?id=${id}`);
   window.location.href = `/post/?id=${id}`;
 }

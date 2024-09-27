@@ -57,10 +57,7 @@ export async function createPost(postData) {
 
   postLink.addEventListener("click", async (event) => {
     event.preventDefault();
-    const url = new URL(window.location.origin + "/post/");
-    url.searchParams.set("id", postData.id);
-    window.history.pushState({}, "", url.toString());
-    window.location.href = url.toString();
+    window.location.href = `/post/?id=${postData.id}`;
   });
 
   const postTitle = document.createElement("h2");
@@ -119,10 +116,7 @@ export async function createPost(postData) {
     editButton.textContent = "Edit";
     editButton.addEventListener("click", async (event) => {
       event.preventDefault();
-      const url = new URL(window.location.origin + "/post/edit/");
-      url.searchParams.set("id", postData.id);
-      window.history.pushState({}, "", url.toString());
-      window.location.href = url.toString();
+      window.location.href = `/post/edit/?id=${postData.id}`;
     });
 
     const deleteButton = document.createElement("button");

@@ -19,10 +19,7 @@ export function appendPostToFeed(posts) {
     avatarLink.href = `/post/${post.name}`;
     avatarLink.addEventListener("click", (event) => {
       event.preventDefault();
-      const url = new URL(window.location.origin + "/profile/");
-      url.searchParams.set("username", post.author.name);
-      window.history.pushState({}, "", url.toString());
-      window.location.href = url.toString();
+      window.location.href = `/profile/?username=${post.author.name}`;
     });
 
     const avatarImg = document.createElement("img");
@@ -57,10 +54,7 @@ export function appendPostToFeed(posts) {
     postLink.href = `/post/${post.id}`;
     postLink.addEventListener("click", (event) => {
       event.preventDefault();
-      const url = new URL(window.location.origin + "/post/");
-      url.searchParams.set("id", post.id);
-      window.history.pushState({}, "", url.toString());
-      window.location.href = url.toString();
+      window.location.href = `/post/?id=${post.id}`;
     });
 
     const postTitle = document.createElement("h2");
