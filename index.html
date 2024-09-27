@@ -29,26 +29,27 @@
         </div>
         <!-- Navigation for Profile Links -->
         <nav class="navigation" aria-label="User Navigation">
-          <a href="/profile/" id="myprofilelink">My Profile</a>
+          <button type="button" id="myProfileButton">My Profile</button>
           <button type="button" id="logoutBtn">Logout</button>
         </nav>
-      </section>
-
-      <!-- Search Section -->
-      <section aria-label="Search Section">
-        <label for="search">Search:</label>
-        <input type="text" id="search" placeholder="Search" />
       </section>
 
       <!-- Feed Section -->
       <section class="feed" aria-label="Post Feed">
         
         <!-- Followers and Following -->
+        
         <div class="follow-section">
-          <button type="button" class="follow-btn">Followers</button>
           <button type="button" class="follow-btn">Following</button>
           <a href="/post/create/">Create Post</a>
         </div>
+
+        <div class="search-sort-container">
+         <!-- Search Section -->
+      <section aria-label="Search Section">
+        <label for="search">Search:</label>
+        <input type="text" id="search" placeholder="Search" />
+      </section>
 
         <!-- Sort By Section -->
         <div class="sort-options">
@@ -59,6 +60,7 @@
             <option value="mostLiked">Most Liked</option>
           </select>
         </div>
+      </div>
 
         <!-- Spinner -->
         <div class="spinner"></div>

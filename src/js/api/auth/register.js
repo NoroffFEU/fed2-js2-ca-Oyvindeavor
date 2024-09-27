@@ -1,5 +1,6 @@
 import { headers } from "../headers";
 import { API_AUTH_REGISTER } from "../constants";
+import { displayErrorMessage } from "../../ui/form/validation/errorMessage";
 
 /**
  * @description Sends a POST request to the API to register a new user with the provided params.
@@ -36,6 +37,7 @@ export async function register({ name, email, password, bio, banner, avatar }) {
     if (!response.ok) {
       const errorData = await response.json();
       const errorMessage = errorData?.errors?.[0]?.message || `Error ${response.status}: ${response.statusText}`;
+      displayErrorMessage("registerError", errorMessage);
       throw new Error(errorMessage);
     }
 

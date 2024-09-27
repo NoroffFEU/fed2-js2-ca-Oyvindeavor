@@ -22,15 +22,15 @@
       <div class="post-container flex column">
         <img src="/images/noroff-logo.png" alt="Noroff Logo" />
         <!-- Form -->
-        <form name="createPost" id="createPostForm" class="flex column">
+        <form name="createPost" id="createPostForm" class="column">
           <!-- Title -->
           <label for="postTitle">Title</label>
-          <input id="postTitle" type="text" name="title" placeholder="Title" />
+          <input id="postTitle" type="text" name="title" placeholder="Title" required />
           <!-- Content -->
           <label for="postContent">Post Content</label>
-          <textarea id="postContent" name="body" placeholder="Enter your post content"></textarea>
+          <textarea id="postContent" name="body" placeholder="Enter your post content" required></textarea>
           <!-- Tags -->
-          <div class="tags-container flex">
+          <div class="tags-container">
             <label>Tags</label>
             <label class="checkbox-tag"> <input type="checkbox" id="checkbox_tag1" name="tags" value="Politics" />Politics </label>
             <label class="checkbox-tag"> <input type="checkbox" id="checkbox_tag2" name="tags" value="Gaming" />Gaming </label>

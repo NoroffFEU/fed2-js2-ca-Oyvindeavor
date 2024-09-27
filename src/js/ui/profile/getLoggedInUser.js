@@ -1,5 +1,5 @@
 import { readProfile } from "../../api/profile/read";
-
+import { authGuard } from "../../utilities/authGuard";
 /**
  * @description Gets the username of the logged in user from local storage.
  * @returns {string} - The username of the logged in user.
@@ -26,6 +26,7 @@ export function getLoggedInUserName() {
  * {username: "test", avatar: "https://example.com/image.jpg", banner: "https://example.com/banner.jpg", bio: "This is a test bio."}
  */
 export async function getLoggedInUser() {
+  authGuard();
   const username = getLoggedInUserName();
   const profile = await readProfile(username);
   return profile.data;

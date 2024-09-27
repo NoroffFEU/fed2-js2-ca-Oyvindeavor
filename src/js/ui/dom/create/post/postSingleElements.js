@@ -13,12 +13,9 @@ export function appendSinglePost(post) {
 
   const avatarLink = document.createElement("a");
   avatarLink.href = "/profile/";
-  const url = new URL(window.location.origin + "/profile/");
-  url.searchParams.set("username", post.author.name);
   avatarLink.addEventListener("click", (event) => {
     event.preventDefault();
-    window.history.pushState({}, "", url.toString());
-    window.location.href = url.toString();
+    window.location.href = `/profile/?username=${post.author.name}`;
   });
 
   const avatarImg = document.createElement("img");
@@ -133,12 +130,9 @@ export function appendComments(post) {
 
     const avatarLink = document.createElement("a");
     avatarLink.href = "/profile/";
-    const url = new URL(window.location.origin + "/profile/");
-    url.searchParams.set("username", comment.author.name);
     avatarLink.addEventListener("click", (event) => {
       event.preventDefault();
-      window.history.pushState({}, "", url.toString());
-      window.location.href = url.toString();
+      window.location.href = `/profile/?username=${comment.author.name}`;
     });
 
     const avatarImg = document.createElement("img");
@@ -199,4 +193,3 @@ export function appendComments(post) {
     commentsSection.appendChild(commentContent);
   });
 }
-

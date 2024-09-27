@@ -1,6 +1,9 @@
 import { reactToPost } from "../../../../api/post/reactions";
 import { commentOnPost } from "../../../../api/post/comment";
 import { getPostFromUrlId } from "../../../post/readUrl";
+import {appendComments} from "../../create/post/postSingleElements";
+import {clearComments} from "../../clear/clearComments";
+
 
 export async function setupLikeEventListener(data) {
   const emojiBtn = document.querySelector(".emoji-btn");

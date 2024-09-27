@@ -88,7 +88,7 @@ export async function readPosts(limit = 12, page = 1, tag) {
  * @returns {Promise<object|null>} - A promise that resolves to the fetched posts data or null if there was an error.
  */
 export async function readPostsByUser(username, limit = 12, page = 1, tag) {
-  const url = `${API_SOCIAL_PROFILES}/${username}/posts?limit=${limit}&page=${page}${tag ? `&tag=${encodeURIComponent(tag)}` : ""}`;
+  const url = `${API_SOCIAL_PROFILES}/${username}/posts?_tag=${tag}&limit=${limit}&page=${page}&_author=true`;
   try {
     const response = await fetch(url, {
       method: "GET",

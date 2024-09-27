@@ -36,6 +36,5 @@ export async function searchPosts(search, limit = 12, page = 1, tag = []) {
     return responseData.data;
   } catch (error) {
     console.error("Error fetching posts", error);
-    console.log("Error fetching posts", error);
   }
 }

@@ -19,17 +19,20 @@
     <!-- Main container -->
     <main class="main-container">
       <!-- Login form -->
-      <form name="login" class="form form--login flex column align-center">
-        <h1 class="form__title">Login</h1>
+      <form name="login" class="post-container">
+        <h1>Login</h1>
+        <span class="error-message" id="loginError"></span>
         <!-- Email input -->
-        <div class="form__group flex column align-start">
+        <div class="form__group">
           <label class="form__label" for="email">Email</label>
-          <input class="form__input" id="email" type="email" name="email" required placeholder="Email" />
+          <input class="form__input" id="email" type="email" name="email" required pattern="^[\w\-.]+@(stud\.)?noroff\.no$" placeholder="Email" />
+          <span class="error-message" id="loginEmailError"></span>
         </div>
         <!-- Password input -->
-        <div class="form__group flex column align-start">
+        <div class="form__group flex">
           <label class="form__label" for="password">Password</label>
-          <input class="form__input" type="password" name="password" id="password" required placeholder="Password" />
+          <input class="form__input" type="password" name="password" id="password" minlength="8" required placeholder="Password" />
+          <span class="error-message" id="loginPasswordError"></span>
         </div>
         <!-- Register link -->
         <a href="/auth/register/" class="form__link">Register</a>

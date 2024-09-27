@@ -4,5 +4,5 @@ export function clearComments() {
   // Remove each direct child element from the comments section
   while (commentsSection.firstChild) {
     commentsSection.removeChild(commentsSection.firstChild);
-  }
+  } 
 }
