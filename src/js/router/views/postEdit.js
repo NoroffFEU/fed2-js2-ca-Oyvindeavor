@@ -1,9 +1,16 @@
 import { authGuard } from "../../utilities/authGuard";
-import { checkIfPageReload } from "../../utilities/checkIfPageReload";
+import { populateEditForm } from "../../ui/form/editPost";
+import { setupPostEditListeners } from "../../ui/form/validation/editPost";
+import { displayPreviewPost } from "../../ui/form/editPost";
+import { onUpdatePost } from "../../ui/post/update";
 
-function init() {
+async function init() {
+  const form = document.forms.editPostForm;
+  form.addEventListener("submit", onUpdatePost);
   authGuard();
-  checkIfPageReload(); // Remove after testing
+  await populateEditForm();
+  displayPreviewPost();
+  setupPostEditListeners();
 }
 
 init();
