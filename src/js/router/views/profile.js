@@ -8,6 +8,7 @@ import { onUpdateProfile } from "../../ui/profile/update";
 import { updateProfileUi } from "../../ui/dom/create/profile/profileElements";
 import { setEditProfileEventListeners } from "../../ui/form/validation/editProfile";
 import { showSpinner, hideSpinner } from "../../utilities/loadingSpinner";
+
 export async function init() {
   showSpinner();
   await updateProfileUi();

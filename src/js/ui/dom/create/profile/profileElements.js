@@ -148,7 +148,9 @@ export async function createPost(postData) {
 }
 
 export function clearPostsProfile() {
-  document.querySelectorAll(".user-posts").forEach((post) => post.remove());
+  const userPosts = document.querySelectorAll(".feed .user-posts");
+  userPosts.forEach((post) => post.remove());
+  // document.querySelectorAll(".feed .user-posts").forEach((post) => post.remove());
 }
 
 // Updates the whole profile page
