@@ -6,6 +6,7 @@ import { loadAndDisplayPosts } from "../../ui/post/displayPosts";
 import { displayLoggedInUserHome } from "../../ui/profile/displayUserProfile";
 import { showSpinner, hideSpinner } from "../../utilities/loadingSpinner";
 import { getLoggedInUserName } from "../../ui/profile/getLoggedInUser";
+import { initializeHomeSearch } from "../../ui/search/search";
 
 export async function init() {
   showSpinner();
@@ -16,6 +17,7 @@ export async function init() {
   displayLoggedInUserHome();
   const loadPosts = await readPosts(12, 1, "øyvind");
   loadAndDisplayPosts(loadPosts);
+  initializeHomeSearch();
   hideSpinner();
 }
 
