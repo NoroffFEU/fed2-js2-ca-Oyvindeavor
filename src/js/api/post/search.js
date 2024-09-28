@@ -21,8 +21,9 @@ import { headers } from "../headers";
  * });
  *
  */
-export async function searchPosts(search, limit = 12, page = 1, tag = []) {
-  const url = `${API_SOCIAL_POSTS_SEARCH}?&_tag=${tag}&q=${search}&limit=${limit}&page=${page}&_author=true`;
+export async function searchPosts(search, limit = 12, page = 1, tag) {
+  // const url = `${API_SOCIAL_POSTS_SEARCH}?_tag=${tag}&q=${search}&limit=${limit}&page=${page}&_author=true`;
+  const url = `${API_SOCIAL_POSTS_SEARCH}?q=${search}&limit=${limit}&page=${page}&_author=true`;
   try {
     const response = await fetch(url, {
       method: "GET",
@@ -32,9 +33,13 @@ export async function searchPosts(search, limit = 12, page = 1, tag = []) {
     if (!response.ok) {
       throw new Error(data.errors[0].message);
     }
-    console.log("searched posts data: ", responseData.data);
-    return responseData.data;
+    const filteredTags = filterPostsByTag(responseData.data, tag);
+    return filteredTags;
   } catch (error) {
     console.error("Error fetching posts", error);
   }
+}
+
+export function filterPostsByTag(posts, tag) {
+  return posts.filter((post) => post.tags.includes(tag));
 }
