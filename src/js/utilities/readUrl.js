@@ -38,7 +38,6 @@ export async function getPostFromUrlId() {
 export async function getPostFromUrlName() {
   const getPostName = readUrlName();
   const post = await readPostsByUser(getPostName,12, 1, "øyvind");
-  console.log(post);
   return post;
 }
 
