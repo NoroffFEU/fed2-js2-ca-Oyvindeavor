@@ -11,16 +11,17 @@
     <header>
       <nav>
         <div class="nav-bar">
-          <a href="/">Noroff FED2 JS2 CA</a>
+          <a href="/" class="center"><span class="material-symbols-outlined">
+            house
+            </span> Home</a>
         </div>
       </nav>
     </header>
 
     <main class="create_post">
-      <h1>Create Post</h1>
       <!-- Form container -->
       <div class="post-container flex column">
-        <img src="/images/noroff-logo.png" alt="Noroff Logo" />
+        <h1>Create Post</h1>
         <!-- Form -->
         <form name="createPost" id="createPostForm" class="column">
           <!-- Title -->
@@ -28,13 +29,15 @@
           <input id="postTitle" type="text" name="title" placeholder="Title" required />
           <!-- Content -->
           <label for="postContent">Post Content</label>
-          <textarea id="postContent" name="body" placeholder="Enter your post content" required></textarea>
+          <textarea id="postContent" name="body" placeholder="Enter your post content"></textarea>
           <!-- Tags -->
           <div class="tags-container">
             <label>Tags</label>
             <label class="checkbox-tag"> <input type="checkbox" id="checkbox_tag1" name="tags" value="Politics" />Politics </label>
             <label class="checkbox-tag"> <input type="checkbox" id="checkbox_tag2" name="tags" value="Gaming" />Gaming </label>
             <label class="checkbox-tag"> <input type="checkbox" id="checkbox_tag3" name="tags" value="Food" />Food </label>
+            <label class="checkbox-tag"> <input type="checkbox" id="checkbox_tag4" name="tags" value="øyvind" checked disabled />Custom tag</label>
+          
           </div>
           <!-- Image -->
           <label for="postImage">Post Image</label>

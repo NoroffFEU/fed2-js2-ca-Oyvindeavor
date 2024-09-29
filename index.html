@@ -11,21 +11,15 @@
     <!-- Global Site Header -->
     <header>
       <nav aria-label="Main Navigation">
-        <div class="nav-bar">
-          <a href="/">Homepage</a>
-        </div>
-      </nav>
-    </header>
+        
 
-    <main class="main-container">
-      <!-- User Profile Section -->
-      <section class="user-profile" aria-label="User Profile">
+        <section class="user-profile" aria-label="User Profile">
         <div class="avatar-big">
           <img
-            src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww"
+            src=""
             alt="User Avatar"
           />
-          <h1 class="username">Øyvind</h1>
+          <h1 class="username"></h1>
         </div>
         <!-- Navigation for Profile Links -->
         <nav class="navigation" aria-label="User Navigation">
@@ -33,6 +27,11 @@
           <button type="button" id="logoutBtn">Logout</button>
         </nav>
       </section>
+      </nav>
+    </header>
+
+    <main class="main-container">
+    
 
       <!-- Feed Section -->
       <section class="feed" aria-label="Post Feed">
@@ -61,61 +60,9 @@
           </select>
         </div>
       </div>
-
-        <!-- Spinner -->
         <div class="spinner"></div>
-
-        <!-- Post Content -->
-        <article class="post-content">
-          <!-- Avatar user post -->
-          <header class="avatar-small">
-            <a href="#">
-              <img
-                
-                src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww"
-                alt="User Avatar"
-              />
-              <span class="username">Øyvind</span>
-            </a>
-            <div class="time-container">
-              <time class="post-date" datetime="2024-09-11">Posted on: September 11, 2024</time>
-            </div>
-          </header>
-
-          <section class="post-content-container">
-            <a href="#">
-              <h2 class="post-title">Hello World!</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi culpa dicta ipsam, quod ipsa a rerum corporis quos vitae voluptatum explicabo enim, consectetur omnis eligendi qui!
-                Perferendis, error aspernatur? Explicabo.
-              </p>
-              <img
-              class="post-img"
-                src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww"
-                alt="Post Image"
-                
-              />
-            </a>
-          </section>
-
-          <footer>
-            <!-- React Container -->
-            <div class="react-container">
-              <div class="emoji-container">
-                <button type="button" class="emoji-btn" data-emoji="thumbsUp" aria-label="Like post">👍</button>
-                <span class="emoji-count" id="thumbsUp-count">0</span>
-              </div>
-            </div>
-          </footer>
-        </article>
       </section>
       <!-- Feed End -->
-
-      <!-- Pagination Section -->
-      <nav class="pagination" aria-label="Pagination Navigation">
-        <button type="button" class="pagination-btn">Previous</button>
-        <button type="button" class="pagination-btn">Next</button>
-      </nav>
     </main>
 
     <!-- Global Site Footer -->
