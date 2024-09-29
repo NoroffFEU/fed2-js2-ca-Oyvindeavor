@@ -1,8 +1,29 @@
-// Dependencies: None
-// This file contains functions that sort an array of posts based on different criteria.
-// The sortByOldest function sorts the posts by the oldest creation date.
-// The sortByMostLiked function sorts the posts by the number of reactions in descending order.
-// The sortByMostCommented function sorts the posts by the number of comments in descending order.
+import { readPosts } from "../../api/post/read.js";
+import { loadAndDisplayPosts } from "../post/displayPosts.js";
+import { showSpinner, hideSpinner } from "../../utilities/loadingSpinner.js";
+
+// Function to setup the sort listener
+export async function setupSortListenerHome() {
+  const sortSelect = document.querySelector("#sortBy");
+
+  sortSelect.addEventListener("change", async (event) => {
+    showSpinner();
+    const loadPosts = await readPosts(12, 1, "øyvind");
+    switch (event.target.value) {
+      case "mostLiked":
+        sortByMostLiked(loadPosts);
+        break;
+      case "oldest":
+        sortByOldest(loadPosts);
+        break;
+      default:
+        break;
+    }
+    loadAndDisplayPosts(loadPosts);
+    
+    hideSpinner();
+  });
+}
 
 /**
  *@description Sorts an array of posts by the oldest creation date.
@@ -35,7 +56,6 @@ export function sortByOldest(posts) {
   const sortPosts = posts.sort((a, b) => {
     return new Date(a.created) - new Date(b.created);
   });
-  console.log("Sorted posts: ", sortPosts);
   return sortPosts;
 }
 
@@ -71,7 +91,6 @@ export function sortByMostLiked(posts) {
   const sortPosts = posts.sort((a, b) => {
     return b._count.reactions - a._count.reactions;
   });
-  console.log("Sorted posts: ", sortPosts);
   return sortPosts;
 }
 
@@ -107,6 +126,5 @@ export function sortByMostCommented(posts) {
   const sortPosts = posts.sort((a, b) => {
     return b._count.comments - a._count.comments;
   });
-  console.log("Sorted posts: ", sortPosts);
   return sortPosts;
 }

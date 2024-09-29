@@ -1,12 +1,9 @@
-import { onCreatePost } from "../../ui/post/create";
 import { authGuard } from "../../utilities/authGuard";
-import { checkIfPageReload } from "../../utilities/checkIfPageReload";
+import { setupPostCreateEventListeners } from "../../ui/events/postCreate";
 
 function init() {
   authGuard();
-  checkIfPageReload();
-  const form = document.forms.createPost;
-  form.addEventListener("submit", onCreatePost);
+  setupPostCreateEventListeners();
 }
 
 init();

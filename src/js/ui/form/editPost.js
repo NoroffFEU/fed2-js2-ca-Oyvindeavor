@@ -1,4 +1,5 @@
-import { getPostFromUrlId } from "../post/readUrl";
+import { getPostFromUrlId } from "../../utilities/readUrl";
+import { markMatchingTags } from "../../utilities/markMatchingTags";
 
 // Gets post data from url, extracts the data, populates the form and-
 // compares the tags from the api to the tags marks the checkboxes.
@@ -34,16 +35,6 @@ export function extractPostData(post) {
   return { title, body, image, tags };
 }
 
-// Checks the tags from the api and marks the checkboxes that matches-
-export function markMatchingTags(tags) {
-  const checkbox = document.querySelectorAll(`input[name="tags"]`);
-  checkbox.forEach((tag) => {
-    if (tags.includes(tag.value)) {
-      tag.checked = true;
-    }
-  });
-}
-
 // Populates the form fields with the data from the api
 export function populateFormFields(title, body, image) {
   const postTitle = document.querySelector("#postTitle");
@@ -70,6 +61,7 @@ export function getEditPostInputValues() {
   return postData;
 }
 
+// Displays the preview post
 export function displayPreviewPost() {
   const postTitle = document.querySelector(".post-title");
   const postBody = document.querySelector(".post-body");

@@ -1,4 +1,4 @@
-import { displayErrorMessage, hideErrorMessage } from "./errorMessage";
+import { displayErrorMessage, hideErrorMessage } from "../../../utilities/errorMessage";
 
 export function setupPostEditListeners() {
   // input listeners for the post title, body, and image

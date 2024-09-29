@@ -1,6 +1,6 @@
 import { headers } from "../headers";
 import { API_AUTH_REGISTER } from "../constants";
-import { displayErrorMessage } from "../../ui/form/validation/errorMessage";
+import { displayErrorMessage } from "../../utilities/errorMessage";
 
 /**
  * @description Sends a POST request to the API to register a new user with the provided params.
