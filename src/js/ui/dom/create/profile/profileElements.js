@@ -12,7 +12,6 @@ export function loadProfilePosts(posts) {
 
   posts.forEach((post) => {
     createPost(post);
-    console.log(post);
   });
 }
 
