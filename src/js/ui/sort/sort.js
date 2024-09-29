@@ -25,6 +25,7 @@ export async function setupSortListenerHome() {
   });
 }
 
+
 /**
  *@description Sorts an array of posts by the oldest creation date.
  *
