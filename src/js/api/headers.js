@@ -3,10 +3,10 @@ import { API_KEY } from "./constants";
 /**
  * @description Creates a new Headers object with the necessary headers for making requests to the API.
  * @returns {Headers} - A Headers object containing the necessary headers for making requests to the API.
- * @example 
+ * @example
  * method: "POST",
  * headers: headers(),
- * 
+ *
  */
 export function headers() {
   const headers = new Headers();

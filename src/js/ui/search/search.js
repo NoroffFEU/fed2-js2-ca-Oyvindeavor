@@ -10,7 +10,7 @@ export async function initializeHomeSearch() {
 
 async function handleSearch(searchInput) {
   showSpinner();
-  
+
   if (!searchInput.value.trim()) {
     await handleEmptySearch();
   } else {
@@ -37,6 +37,3 @@ async function handleNonEmptySearch(query) {
     console.error("Failed to search posts:", error);
   }
 }
-
-
-

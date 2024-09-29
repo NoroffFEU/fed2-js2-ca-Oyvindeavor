@@ -20,7 +20,7 @@ export async function setupSortListenerHome() {
         break;
     }
     loadAndDisplayPosts(loadPosts);
-    
+
     hideSpinner();
   });
 }

@@ -1,7 +1,7 @@
 import { getPostFromUrlId } from "../../utilities/readUrl";
 import { loadAndDisplayPost } from "../../ui/post/displayPost";
-import { showSpinner} from "../../utilities/loadingSpinner";
-import {setupPostEventListeners} from "../../ui/events/post";
+import { showSpinner } from "../../utilities/loadingSpinner";
+import { setupPostEventListeners } from "../../ui/events/post";
 
 async function init() {
   showSpinner();

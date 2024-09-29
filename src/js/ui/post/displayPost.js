@@ -12,5 +12,4 @@ export function loadAndDisplayPost(post) {
   appendSinglePost(post);
   clearComments();
   appendComments(post);
-
 }

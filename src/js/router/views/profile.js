@@ -16,9 +16,3 @@ export async function init() {
 }
 
 init();
-
-async function setUpSortListenerProfile() {
-  const sortSelect = document.querySelector("#sortBy");
-
-}
-

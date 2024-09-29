@@ -1,4 +1,4 @@
-import {setLoginInputListeners} from "../form/validation/login";
+import { setLoginInputListeners } from "../form/validation/login";
 import { onLogin } from "../auth/login";
 
 export function setUpLoginEventListeners() {

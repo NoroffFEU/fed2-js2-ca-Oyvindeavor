@@ -1,69 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Narnoor:wght@400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Narnoor:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400&display=swap");
 
 @font-face {
-    font-family: 'Narnoor';
-    font-style: normal;
-    font-weight: 400;
-    src: url();
+  font-family: "Narnoor";
+  font-style: normal;
+  font-weight: 400;
+  src: url();
 }
 
 .narnoor-regular {
-    font-family: "Narnoor", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .narnoor-medium {
-    font-family: "Narnoor", serif;
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  .narnoor-semibold {
-    font-family: "Narnoor", serif;
-    font-weight: 600;
-    font-style: normal;
-  }
-  
-  .narnoor-bold {
-    font-family: "Narnoor", serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .narnoor-extrabold {
-    font-family: "Narnoor", serif;
-    font-weight: 800;
-    font-style: normal;
-  }
-  
-  .label {
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 700;
-  }
+  font-family: "Narnoor", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
-  p {
-   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-  }
+.narnoor-medium {
+  font-family: "Narnoor", serif;
+  font-weight: 500;
+  font-style: normal;
+}
 
-  .post-title {
-    font-size: 24px;
-    line-height: 32px;
-    font-weight: 700;
-  }
+.narnoor-semibold {
+  font-family: "Narnoor", serif;
+  font-weight: 600;
+  font-style: normal;
+}
 
-  .post-content h2 {
-    font-size: 24px;
-    line-height: 24px;
-  }
+.narnoor-bold {
+  font-family: "Narnoor", serif;
+  font-weight: 700;
+  font-style: normal;
+}
 
-  .post-content-container h2 {
-    font-size: 24px;
-    line-height: 32px;
-    font-weight: 700;
-  }
+.narnoor-extrabold {
+  font-family: "Narnoor", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.label {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.post-title {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.post-content h2 {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.post-content-container h2 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}

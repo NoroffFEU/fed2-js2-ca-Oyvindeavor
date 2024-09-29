@@ -1,4 +1,4 @@
-import {setUpLoginEventListeners} from "../../ui/events/login";
+import { setUpLoginEventListeners } from "../../ui/events/login";
 
 function init() {
   setUpLoginEventListeners();

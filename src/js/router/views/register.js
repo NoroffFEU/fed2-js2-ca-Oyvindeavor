@@ -1,4 +1,4 @@
-import {setupRegisterEventListeners} from "../../ui/events/register";
+import { setupRegisterEventListeners } from "../../ui/events/register";
 
 function init() {
   setupRegisterEventListeners();
