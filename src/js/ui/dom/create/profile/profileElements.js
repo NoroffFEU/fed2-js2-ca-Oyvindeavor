@@ -3,10 +3,16 @@ import { readUrlName } from "../../../../utilities/readUrl";
 import { readProfile } from "../../../../api/profile/read";
 import { onDeletePost } from "../../../post/delete";
 
+
 // This function loads the profile posts loops through each post and calls the createPost function on each post
 export function loadProfilePosts(posts) {
+  if (posts.length === 0) return;
+
+  clearPostsProfile();
+
   posts.forEach((post) => {
     createPost(post);
+    console.log(post);
   });
 }
 
@@ -139,9 +145,8 @@ export async function createPost(postData) {
 }
 
 export function clearPostsProfile() {
-  const userPosts = document.querySelectorAll(".feed .user-posts");
+  const userPosts = document.querySelectorAll(".post-content");
   userPosts.forEach((post) => post.remove());
-  // document.querySelectorAll(".feed .user-posts").forEach((post) => post.remove());
 }
 
 // Updates the whole profile page
