@@ -1,7 +1,5 @@
 import { headers } from "../headers";
 import { API_SOCIAL_POSTS } from "../constants";
-import { readProfile } from "../profile/read";
-import { getLoggedInUser } from "../../ui/profile/getLoggedInUser";
 /**
  * Creates a new post by sending the provided data to the API.
  * This function constructs a
@@ -55,7 +53,6 @@ export async function createPost({ title, body, tags, media }) {
     }
 
     const responsedata = await response.json();
-    console.log("Post created: test", responsedata.data);
     return responsedata.data;
   } catch (error) {
     console.error("API Error:", error);

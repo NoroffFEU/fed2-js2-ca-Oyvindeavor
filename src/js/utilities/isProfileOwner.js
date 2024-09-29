@@ -1,5 +1,5 @@
-import { readUrlName } from "../../ui/profile/readUrlName.js";
-import { getLoggedInUser } from "../../ui/profile/getLoggedInUser.js";
+import { readUrlName } from "./readUrl.js";
+import { getLoggedInUser } from "../ui/profile/getLoggedInUser.js";
 
 /**
  * Checks if the logged-in user is the owner of the profile.
@@ -22,14 +22,14 @@ import { getLoggedInUser } from "../../ui/profile/getLoggedInUser.js";
  * }
  * // The edit profile button is displayed if the logged-in user is the owner.
  */
+// Checks if the logged-in user is the owner of the profile.
 export async function isProfileOwner() {
-    try {
-      const name = readUrlName(); 
-      const loggedInUser = await getLoggedInUser();
-      return loggedInUser && name === loggedInUser.name;
-      
-    } catch (error) {
-      console.error("Error checking profile ownership:", error);
-      return false;
-    }
+  try {
+    const name = readUrlName();
+    const loggedInUser = await getLoggedInUser();
+    return loggedInUser && name === loggedInUser.name;
+  } catch (error) {
+    console.error("Error checking profile ownership:", error);
+    return false;
   }
+}

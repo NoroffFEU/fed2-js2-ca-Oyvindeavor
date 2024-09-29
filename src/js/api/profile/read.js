@@ -30,7 +30,6 @@ export async function readProfile(username) {
       headers: headers(),
     });
     const data = await response.json();
-    console.log(data); // Remove after testing
     return data;
   } catch (error) {
     console.error(error);
@@ -69,7 +68,6 @@ export async function readProfiles(limit, page) {
       headers: headers(),
     });
     const data = await response.json();
-    console.log(data); // Remove after testing
   } catch (error) {
     console.error(error);
   }

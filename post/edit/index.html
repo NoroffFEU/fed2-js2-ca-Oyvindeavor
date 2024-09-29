@@ -11,28 +11,21 @@
     <header>
       <nav>
         <div class="nav-bar">
-          <a href="/">Noroff FED2 JS2 CA</a>
+          <a href="/" class="center"><span class="material-symbols-outlined"> house </span> Home</a>
         </div>
       </nav>
     </header>
 
     <main class="main-container post-container">
       <h1>Edit Post</h1>
-        <section class="edit-preview">
-          <a href="#">
-            <h2 class="post-title">Hello World!</h2>
-            <p class="post-body">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi culpa dicta ipsam, quod ipsa a rerum corporis quos vitae voluptatum explicabo enim, consectetur omnis eligendi qui!
-              Perferendis, error aspernatur? Explicabo.
-            </p>
-            <img
-              class="post-img"
-              src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww"
-              alt="Post Image"
-            />
-          </a>
-          <span id="error-message-fetch" class="error-message"></span>
-        </section>
+      <section class="edit-preview">
+        <a href="#">
+          <h2 class="post-title"></h2>
+          <p class="post-body"></p>
+          <img class="post-img" src="" alt="" />
+        </a>
+        <span id="error-message-fetch" class="error-message"></span>
+      </section>
 
       <form name="editPost" id="editPostForm">
         <!-- Post Title -->
@@ -63,10 +56,7 @@
             <label> <input type="checkbox" name="tags" value="Politics" /> Politics </label>
             <label> <input type="checkbox" name="tags" value="Gaming" /> Gaming </label>
             <label> <input type="checkbox" name="tags" value="Food" /> Food </label>
-            <label> 
-              <input type="checkbox" name="tags" value="øyvind" checked disabled />Custom tag
-              Custom tag?
-             </label>
+            <label> <input type="checkbox" name="tags" value="øyvind" checked disabled />Custom tag </label>
           </div>
         </div>
 
@@ -75,7 +65,6 @@
           <button type="submit">Update Post</button>
         </div>
       </form>
-
     </main>
 
     <footer>

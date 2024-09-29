@@ -37,6 +37,3 @@ async function handleNonEmptySearch(query) {
     console.error("Failed to search posts:", error);
   }
 }
-
-
-

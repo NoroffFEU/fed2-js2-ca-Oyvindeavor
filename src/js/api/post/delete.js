@@ -36,8 +36,6 @@ export async function deletePost(id) {
       const errorMessage = data && data.errors ? data.errors[0].message : "Failed to delete post";
       throw new Error(errorMessage);
     }
-
-    console.log("Post deleted successfully");
     return data;
   } catch (error) {
     console.error("Error deleting post", error);
@@ -77,7 +75,6 @@ export async function deleteComment(postId, commentId) {
       throw new Error(errorMessage);
     }
 
-    console.log("Comment deleted successfully");
     return data;
   } catch (error) {
     console.error("Error deleting comment", error);

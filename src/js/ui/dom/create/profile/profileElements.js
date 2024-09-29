@@ -1,12 +1,18 @@
-import { deletePost } from "../../../../api/post/delete";
-import { isProfileOwner } from "../../../profile/isProfileOwner";
-import { readUrlName } from "../../../profile/readUrlName";
+import { isProfileOwner } from "../../../../utilities/isProfileOwner";
+import { readUrlName } from "../../../../utilities/readUrl";
 import { readProfile } from "../../../../api/profile/read";
+import { onDeletePost } from "../../../post/delete";
+
 
 // This function loads the profile posts loops through each post and calls the createPost function on each post
 export function loadProfilePosts(posts) {
+  if (posts.length === 0) return;
+
+  clearPostsProfile();
+
   posts.forEach((post) => {
     createPost(post);
+    console.log(post);
   });
 }
 
@@ -14,7 +20,6 @@ export function loadProfilePosts(posts) {
 export async function createPost(postData) {
   const owner = await isProfileOwner();
 
-  console.log("Creating post with data:", postData);
   // Create the article element
   const postArticle = document.createElement("article");
   postArticle.classList.add("post-content");
@@ -123,15 +128,7 @@ export async function createPost(postData) {
     deleteButton.type = "button";
     deleteButton.classList.add("delete-post-button");
     deleteButton.textContent = "Delete";
-    deleteButton.addEventListener("click", async (event) => {
-      event.preventDefault();
-      const confirmDelete = confirm("Are you sure you want to delete this post?");
-      if (confirmDelete) {
-        confirm("Post deleted");
-        await deletePost(postData.id);
-        postArticle.remove(); // Remove the post from the DOM
-      }
-    });
+    deleteButton.addEventListener("click", (event) => onDeletePost(event, postData, postArticle));
 
     editDelete.appendChild(editButton);
     editDelete.appendChild(deleteButton);
@@ -148,25 +145,18 @@ export async function createPost(postData) {
 }
 
 export function clearPostsProfile() {
-  const userPosts = document.querySelectorAll(".feed .user-posts");
+  const userPosts = document.querySelectorAll(".post-content");
   userPosts.forEach((post) => post.remove());
-  // document.querySelectorAll(".feed .user-posts").forEach((post) => post.remove());
 }
 
 // Updates the whole profile page
 export async function updateProfileUi() {
-  // Check if the profile page is the logged in user's profile page
   const owner = await isProfileOwner();
-  // Get the username from the URL
   const readName = readUrlName();
-  // Get the profile data by passing in the username from the url
   const profileData = await readProfile(readName);
 
-  // Update the profile details
   updateProfileDetails(profileData);
 
-  // Checks to see if the logged in user is the owner of the profile
-  // If it is the owner, the edit button is displayed otherwise it is hidden
   if (owner === false) {
     const updateProfileButton = document.querySelector(".edit-button");
     updateProfileButton.style.display = "none";
@@ -200,7 +190,6 @@ export function toggleUpdateProfileForm() {
   const updateProfileForm = document.querySelector(".update-profile-form");
   const updateProfileButton = document.querySelector(".edit-button");
   updateProfileButton.addEventListener("click", () => {
-    console.log("Edit button clicked");
     if (updateProfileForm.style.display === "block") {
       updateProfileForm.style.display = "none";
       updateProfileButton.textContent = "Edit Profile";

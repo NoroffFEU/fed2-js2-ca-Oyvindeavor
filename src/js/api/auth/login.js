@@ -1,6 +1,6 @@
 import { API_AUTH_LOGIN } from "../constants";
 import { headers } from "../headers";
-import { displayErrorMessage } from "../../ui/form/validation/errorMessage";
+import { displayErrorMessage } from "../../utilities/errorMessage";
 
 /**
  * @description Sends a POST request to the API to log in a user with the provided email and password.

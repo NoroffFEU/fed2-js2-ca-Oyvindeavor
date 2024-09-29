@@ -1,6 +1,6 @@
 import { API_SOCIAL_POSTS } from "../constants";
 import { headers } from "../headers";
-import { displayErrorMessage } from "../../ui/form/validation/errorMessage";
+import { displayErrorMessage } from "../../utilities/errorMessage";
 
 export async function updatePost(id, { title, body, tags, media }) {
   try {
@@ -19,7 +19,6 @@ export async function updatePost(id, { title, body, tags, media }) {
       displayErrorMessage("error-message-fetch", responseData.errors[0].message);
       throw new Error(responseData.errors[0].message);
     }
-    console.log("Post updated:", responseData);
   } catch (error) {
     console.error("error updating post ", error);
   }

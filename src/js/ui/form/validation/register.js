@@ -1,4 +1,4 @@
-import { displayErrorMessage, hideErrorMessage } from "./errorMessage.js";
+import { displayErrorMessage, hideErrorMessage } from "../../../utilities/errorMessage";
 
 export function setFormInputListeners() {
   addNameInputListener();

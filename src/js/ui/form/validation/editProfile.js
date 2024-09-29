@@ -1,4 +1,4 @@
-import { displayErrorMessage, hideErrorMessage } from "../validation/errorMessage";
+import { displayErrorMessage, hideErrorMessage } from "../../../utilities/errorMessage";
 
 export function setEditProfileEventListeners() {
   addAvatarInputListener();
@@ -7,7 +7,9 @@ export function setEditProfileEventListeners() {
 
 function addAvatarInputListener() {
   const avatarInput = document.querySelector("#profileImg");
-  avatarInput.addEventListener("input", () => {
+  avatarInput.addEventListener("input", handleInput);
+
+  function handleInput() {
     if (avatarInput.checkValidity()) {
       avatarInput.style.border = "2px solid green";
       hideErrorMessage("error-message-profile");
@@ -19,12 +21,14 @@ function addAvatarInputListener() {
       avatarInput.style.border = "";
       hideErrorMessage("error-message-profile");
     }
-  });
+  }
 }
 
 function addBannerInputListener() {
   const bannerInput = document.querySelector("#bannerImg");
-  bannerInput.addEventListener("input", () => {
+  bannerInput.addEventListener("input", handleInput);
+
+  function handleInput() {
     if (bannerInput.checkValidity()) {
       bannerInput.style.border = "2px solid green";
       hideErrorMessage("error-message-profile");
@@ -36,5 +40,5 @@ function addBannerInputListener() {
       bannerInput.style.border = "";
       hideErrorMessage("error-message-profile");
     }
-  });
+  }
 }
