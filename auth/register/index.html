@@ -1,55 +1,91 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Noroff FED2 JS2 CA</title>
+    <title>Register</title>
     <script type="module" src="/src/app.js"></script>
+     <!--Favicon-->
+     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+     <link rel="manifest" href="/site.webmanifest" />
   </head>
 
   <body>
-    <h1>Register</h1>
+    <header>
+      <nav>
+        <div class="nav-bar">
+          <a href="/">Noroff FED2 JS2 CA</a>
+        </div>
+      </nav>
+    </header>
 
-    <form name="register">
-      <div>
-        <label for="name">Name</label>
-        <input
-          id="name"
-          type="text"
-          name="name"
-          required
-          maxlength="20"
-          pattern="^[\w]+$"
-          title="Please enter a username using only letters and numbers"
-        />
+    <!-- Main container -->
+    <main class="main-container">
+      <!-- Register form -->
+      <form name="register" class="post-container" autocomplete="off">
+        <h1 class="form__title">Register</h1>
+        <span class="error-message" id="registerError"></span>
+        <!-- Name input -->
+        <div class="form__group column">
+          <label class="form__label" for="name">Name</label>
+          <input class="form__input" id="name" type="text" name="name" required maxlength="20" pattern="^[\w]+$" title="Please enter a username using only letters and numbers" autocomplete="off" />
+          <span class="error-message" id="registerNameError"></span>
+        </div>
+        <!-- Email input -->
+        <div class="form__group">
+          <label class="form__label" for="email">Email</label>
+          <input
+            class="form__input"
+            id="email"
+            type="email"
+            name="email"
+            required
+            pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
+            title="Please enter a valid noroff.no or stud.noroff.no address"
+            autocomplete="off"
+          />
+          <span class="error-message" id="registerEmailError"></span>
+        </div>
+        <!-- Password input -->
+        <div class="form__group">
+          <label class="form__label" for="password">Password</label>
+          <input class="form__input" type="password" name="password" id="password" required minlength="8" />
+          <span class="error-message" id="registerPasswordError"></span>
+        </div>
+
+        <!-- Bio input -->
+        <div class="form__group">
+          <label class="form__label" for="bio">Bio (optional)</label>
+          <textarea class="form__input" type="text" name="bio" id="bio" maxlength="159"></textarea>
+          <span class="error-message" id="registerBioError"></span>
+        </div>
+
+        <!--Banner input -->
+        <div class="form__group">
+          <label class="form__label" for="banner">Banner (optional)</label>
+          <input class="form__input" type="url" name="banner" id="banner" />
+          <span class="error-message" id="registerBannerError"></span>
+        </div>
+
+        <!-- Avatar Input -->
+        <div class="form__group">
+          <label class="form__label" for="avatar">Avatar (optional)</label>
+          <input class="form__input" type="url" name="avatar" id="avatar" />
+          <span class="error-message" id="registerAvatarImgError"></span>
+        </div>
+
+        <!-- Login link -->
+        <a href="/auth/login/" class="form__link">Login</a>
+        <!-- Register button -->
+        <button type="submit" class="form__button">Register</button>
+      </form>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <p>&copy; Social media application</p>
       </div>
-
-      <div>
-        <label for="email">Email</label>
-        <input
-          id="email"
-          type="email"
-          name="email"
-          required
-          pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
-          title="Please enter a valid noroff.no or stud.noroff.no address"
-        />
-      </div>
-
-      <div>
-        <label for="password">Password</label>
-        <input
-          type="password"
-          name="password"
-          id="password"
-          required
-          minlength="8"
-        />
-      </div>
-
-      <a href="/auth/login/">Login</a>
-      <button>Register</button>
-    </form>
+    </footer>
   </body>
 </html>

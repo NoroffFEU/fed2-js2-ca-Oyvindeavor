@@ -1,17 +1,78 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Noroff FED2 JS2 CA</title>
+    <title>Profile</title>
     <script type="module" src="/src/app.js"></script>
+     <!--Favicon-->
+     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+     <link rel="manifest" href="/site.webmanifest" />
   </head>
-  <body>
-    <h1>Profile</h1>
 
-    <form name="updateProfile">
-      <button>Update Profile</button>
-    </form>
+  <body>
+    <!-- Global Site Header -->
+    <header>
+      <nav aria-label="Main Navigation">
+        <div class="nav-bar">
+          <a href="/" class="center"><span class="material-symbols-outlined"> house </span> Home</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-container">
+      <article class="feed">
+        <div class="spinner"></div>
+
+        <!-- Profile Banner Section -->
+        <section class="profile-banner" aria-label="Profile Banner">
+          <img class="user-banner" src="" alt="User Banner" />
+        </section>
+
+        <!-- Profile Details Section -->
+        <section class="profile-details" aria-label="Profile Information">
+          <div class="edit-logout">
+            <button type="button" class="logout-button" id="logoutBtn">Logout</button>
+            <button type="button" class="edit-button">Edit Profile</button>
+          </div>
+
+          <!-- User Avatar -->
+          <img src="" alt="User Avatar" class="avatar-big" />
+          <h1 class="username"></h1>
+          <p class="user-bio"></p>
+          <!-- Follow section -->
+          <div class="follow-section">
+            <p class="followers"></p>
+            <p class="following"></p>
+            <button type="button" class="follow-btn">Follow</button>
+          </div>
+
+          <!-- Error message -->
+          <span id="error-message-profile" class="error-message" aria-live="polite">Error message</span>
+          <!-- Update Profile Form -->
+          <form name="updateProfile" class="update-profile-form" aria-label="Update Profile Form">
+            <label for="profileImg">Profile Image URL:</label>
+            <input type="url" id="profileImg" name="profileImg" placeholder="Enter a URL for your profile image" />
+            <label for="bannerImg">Banner Image URL:</label>
+            <input type="url" id="bannerImg" name="bannerImg" placeholder="Enter a URL for your banner image" />
+            <textarea id="bio" name="bio" placeholder="Enter a short bio about yourself" maxlength="159"></textarea>
+            <button type="submit" class="update-button">Submit</button>
+          </form>
+        </section>
+
+        <!-- User's Latest Posts Section -->
+        <section class="user-posts" aria-label="User's Latest Posts">
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <!-- Global Site Footer -->
+    <footer>
+      <div class="footer-container">
+        <p>&copy; Social media application</p>
+      </div>
+    </footer>
   </body>
 </html>

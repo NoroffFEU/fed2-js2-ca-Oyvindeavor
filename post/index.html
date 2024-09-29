@@ -1,13 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
+<!-- Add the 'apple-touch-icon' link element -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Noroff FED2 JS2 CA</title>
+    <title>Posts page</title>
     <script type="module" src="/src/app.js"></script>
+    <!--Favicon-->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
   </head>
+
   <body>
-    <h1>Post Page</h1>
+    <!-- Global Site Header -->
+    <header>
+      <nav aria-label="Main Navigation">
+        <div class="nav-bar">
+          <a href="/" class="center"><span class="material-symbols-outlined"> house </span> Home</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-container">
+      <!-- Feed -->
+      <article class="feed">
+        <!-- Spinner -->
+        <div class="spinner"></div>
+      </article>
+      <!-- Dynamically added comments  -->
+      <section class="comments" aria-label="Comments Section"></section>
+    </main>
+    <!-- Global Site Footer -->
+    <footer>
+      <div class="footer-container">
+        <p>&copy; Social Media Application</p>
+      </div>
+    </footer>
   </body>
 </html>

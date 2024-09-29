@@ -1,16 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Noroff FED2 JS2 CA</title>
+    <title>Create post</title>
     <script type="module" src="/src/app.js"></script>
+    <!--Favicon-->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
   </head>
-  <body>
-    <h1>Create Post</h1>
 
-    <form name="createPost">
-      <button>Create Post</button>
-    </form>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-bar">
+          <a href="/" class="center"><span class="material-symbols-outlined"> house </span> Home</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="create_post">
+      <!-- Form container -->
+      <div class="post-container flex column">
+        <h1>Create Post</h1>
+        <!-- Form -->
+        <form name="createPost" id="createPostForm" class="column">
+          <!-- Title -->
+          <label for="postTitle">Title</label>
+          <input id="postTitle" type="text" name="title" placeholder="Title" required />
+          <!-- Content -->
+          <label for="postContent">Post Content</label>
+          <textarea id="postContent" name="body" placeholder="Enter your post content"></textarea>
+          <!-- Tags -->
+          <div class="tags-container">
+            <label>Tags</label>
+            <label class="checkbox-tag"> <input type="checkbox" id="checkbox_tag1" name="tags" value="Politics" />Politics </label>
+            <label class="checkbox-tag"> <input type="checkbox" id="checkbox_tag2" name="tags" value="Gaming" />Gaming </label>
+            <label class="checkbox-tag"> <input type="checkbox" id="checkbox_tag3" name="tags" value="Food" />Food </label>
+            <label class="checkbox-tag"> <input type="checkbox" id="checkbox_tag4" name="tags" value="øyvind" checked disabled />Custom tag</label>
+          </div>
+          <!-- Image -->
+          <label for="postImage">Post Image</label>
+          <input type="url" id="postImage" name="media" placeholder="Enter image URL" />
+          <!-- Submit button -->
+          <button type="submit" id="createPostButton">Create Post</button>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <p>&copy; Social media application</p>
+      </div>
+    </footer>
   </body>
 </html>

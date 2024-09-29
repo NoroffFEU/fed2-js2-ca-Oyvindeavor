@@ -1,1 +1,5 @@
-alert("Auth Index Page");
+function init() {
+  alert("Auth Index Page");
+}
+
+init();

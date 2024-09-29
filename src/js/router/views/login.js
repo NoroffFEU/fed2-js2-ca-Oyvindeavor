@@ -1,5 +1,7 @@
-import { onLogin } from "../../ui/auth/login";
+import { setUpLoginEventListeners } from "../../ui/events/login";
 
-const form = document.forms.login;
+function init() {
+  setUpLoginEventListeners();
+}
 
-form.addEventListener("submit", onLogin);
+init();

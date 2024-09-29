@@ -1,5 +1,7 @@
-import { onRegister } from "../../ui/auth/register";
+import { setupRegisterEventListeners } from "../../ui/events/register";
 
-const form = document.forms.register;
+function init() {
+  setupRegisterEventListeners();
+}
 
-form.addEventListener("submit", onRegister);
+init();

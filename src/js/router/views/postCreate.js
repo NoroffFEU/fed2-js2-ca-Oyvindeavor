@@ -1,8 +1,9 @@
-import { onCreatePost } from "../../ui/post/create";
 import { authGuard } from "../../utilities/authGuard";
+import { setupPostCreateEventListeners } from "../../ui/events/postCreate";
 
-authGuard();
+function init() {
+  authGuard();
+  setupPostCreateEventListeners();
+}
 
-const form = document.forms.createPost;
-
-form.addEventListener("submit", onCreatePost);
+init();

@@ -1,22 +1,71 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <script type="module" src="/src/app.js"></script>
+    <!--Favicon-->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
+  <body>
+    <!-- Global Site Header -->
+    <header>
+      <nav aria-label="Main Navigation">
+        <section class="user-profile" aria-label="User Profile">
+          <div class="avatar-big">
+            <img src="" alt="User Avatar" />
+            <h1 class="username"></h1>
+          </div>
+          <!-- Navigation for Profile Links -->
+          <nav class="navigation" aria-label="User Navigation">
+            <button type="button" id="myProfileButton">My Profile</button>
+            <button type="button" id="logoutBtn">Logout</button>
+          </nav>
+        </section>
+      </nav>
+    </header>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Noroff FED2 JS2 CA</title>
-  <script type="module" src="/src/app.js"></script>
-</head>
+    <main class="main-container">
+      <!-- Feed Section -->
+      <section class="feed" aria-label="Post Feed">
+        <!-- Followers and Following -->
 
-<body>
-  <img src="/images/noroff-logo.png" alt="Noroff Logo" />
+        <div class="follow-section">
+          <button type="button" class="follow-btn">Following</button>
+          <a href="/post/create/">Create Post</a>
+        </div>
 
-  <h1>Home</h1>
+        <div class="search-sort-container">
+          <!-- Search Section -->
+          <section aria-label="Search Section">
+            <label for="search">Search:</label>
+            <input type="text" id="search" placeholder="Search" />
+          </section>
 
-  <a href="/profile/">My Profile</a>
-  <a href="/auth/login/">Login</a>
-  <a href="/auth/register/">Register</a>
-  <button>Logout</button>
-</body>
+          <!-- Sort By Section -->
+          <div class="sort-options">
+            <label for="sortBy">Sort By:</label>
+            <select id="sortBy">
+              <option value="newest">Newest</option>
+              <option value="oldest">Oldest</option>
+              <option value="mostLiked">Most Liked</option>
+            </select>
+          </div>
+        </div>
+        <div class="spinner"></div>
+      </section>
+      <!-- Feed End -->
+    </main>
+
+    <!-- Global Site Footer -->
+    <footer>
+      <div class="footer-container">
+        <p>&copy; Social media application</p>
+      </div>
+    </footer>
+  </body>
 </html>

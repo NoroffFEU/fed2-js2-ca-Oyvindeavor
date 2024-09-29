@@ -1,18 +1,80 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Noroff FED2 JS2 CA</title>
+    <title>Edit Post</title>
     <script type="module" src="/src/app.js"></script>
+     <!--Favicon-->
+     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+     <link rel="manifest" href="/site.webmanifest" />
   </head>
 
   <body>
-    <h1>Edit Post</h1>
+    <header>
+      <nav>
+        <div class="nav-bar">
+          <a href="/" class="center"><span class="material-symbols-outlined"> house </span> Home</a>
+        </div>
+      </nav>
+    </header>
 
-    <form name="editPost">
-      <button>Edit Post</button>
-    </form>
+    <main class="main-container post-container">
+      <h1>Edit Post</h1>
+      <section class="edit-preview">
+        <a href="#">
+          <h2 class="post-title"></h2>
+          <p class="post-body"></p>
+          <img class="post-img" src="" alt="" />
+        </a>
+        <span id="error-message-fetch" class="error-message"></span>
+      </section>
+
+      <form name="editPost" id="editPostForm">
+        <!-- Post Title -->
+        <div class="form__group">
+          <label for="postTitle">Title</label>
+          <input type="text" id="postTitle" name="title" placeholder="Enter post title" required />
+          <span id="error-message-title" class="error-message"></span>
+        </div>
+
+        <!-- Post Body -->
+        <div class="form__group">
+          <label for="postBody">Body</label>
+          <textarea id="postBody" name="body" rows="6" placeholder="Enter post content" optional></textarea>
+          <span id="error-message-body" class="error-message"></span>
+        </div>
+
+        <!-- Post image -->
+        <div class="form__group">
+          <label for="postImage">Image URL</label>
+          <input type="url" id="postImage" name="image" placeholder="Enter image URL" optional />
+          <span id="error-message-image" class="error-message"></span>
+        </div>
+
+        <!-- Post Tags (Checkboxes) -->
+        <div class="form__group">
+          <label>Tags</label>
+          <div class="checkbox-tag">
+            <label> <input type="checkbox" name="tags" value="Politics" /> Politics </label>
+            <label> <input type="checkbox" name="tags" value="Gaming" /> Gaming </label>
+            <label> <input type="checkbox" name="tags" value="Food" /> Food </label>
+            <label> <input type="checkbox" name="tags" value="øyvind" checked disabled />Custom tag </label>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group">
+          <button type="submit">Update Post</button>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <p>&copy; Social media application</p>
+      </div>
+    </footer>
   </body>
 </html>
