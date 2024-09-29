@@ -24,7 +24,6 @@ export async function commentOnPost(post, comment) {
   if (!response.ok) {
     throw new Error(responseData.errors[0].message);
   }
-  console.log("Comment data", responseData.data); // remove after testing
   return responseData;
 }
 
@@ -39,5 +38,4 @@ export async function replyToComment(post, commentId, reply) {
   if (!response.ok) {
     throw new Error(responseData.errors[0].message);
   }
-  console.log("Reply data", responseData.data); // remove after testing
 }

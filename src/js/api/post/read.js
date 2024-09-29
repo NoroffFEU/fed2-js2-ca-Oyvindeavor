@@ -26,7 +26,6 @@ export async function readPost(id) {
     if (!response.ok) {
       throw new Error(data.errors[0].message);
     }
-    console.log("Post data", responseData.data);
     return responseData.data;
   } catch (error) {
     console.error("Error fetching post", error);
@@ -71,11 +70,9 @@ export async function readPosts(limit = 12, page = 1, tag) {
     if (!response.ok) {
       throw new Error(data.errors[0].message);
     }
-    console.log("Posts data", responseData.data);
     return responseData.data;
   } catch (error) {
     console.error("Error fetching posts", error);
-    console.log("Error fetching posts", error);
   }
 }
 
@@ -98,7 +95,6 @@ export async function readPostsByUser(username, limit = 12, page = 1, tag) {
     if (!response.ok) {
       throw new Error(data.errors[0].message);
     }
-    console.log("Posts data", responseData.data);
     return responseData.data;
   } catch (error) {
     console.error("Error fetching posts", error);

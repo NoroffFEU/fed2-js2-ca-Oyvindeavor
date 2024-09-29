@@ -25,5 +25,4 @@ export async function reactToPost(post, emoji) {
   if (!response.ok) {
     throw new Error(responseData.errors[0].message);
   }
-  console.log("Reaction data", responseData.data); // remove after testing
 }

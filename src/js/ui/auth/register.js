@@ -7,7 +7,6 @@ export async function onRegister(event) {
 
   try {
     const response = await register(formData);
-    console.log("Registration successful:", response); // Remove after testing
     alert("Registration successful. Please log in to continue.");
     window.location.href = "/auth/login/";
   } catch (error) {

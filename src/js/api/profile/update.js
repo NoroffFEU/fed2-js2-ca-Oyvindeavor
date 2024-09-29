@@ -15,9 +15,7 @@ export async function updateProfile(username, { avatar, banner, bio }) {
       headers: headers(),
       body: JSON.stringify(deconstruct),
     });
-    console.log(JSON.stringify(deconstruct)); 
     const data = await response.json();
-    console.log(data);
     return data;
   } catch (error) {
     console.error(error);
