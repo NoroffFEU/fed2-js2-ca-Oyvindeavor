@@ -45,7 +45,7 @@
           </div>
 
           <!-- Error message -->
-          <span id="error-message-profile" aria-live="polite">Error message</span>
+          <span id="error-message-profile" class="error-message" aria-live="polite">Error message</span>
           <!-- Update Profile Form -->
           <form name="updateProfile" class="update-profile-form" aria-label="Update Profile Form">
             <label for="profileImg">Profile Image URL:</label>
@@ -59,22 +59,6 @@
 
         <!-- User's Latest Posts Section -->
         <section class="user-posts" aria-label="User's Latest Posts">
-          <div class="search-sort-container">
-            <!-- Search section -->
-            <section aria-label="Search Section">
-              <label for="search">Search:</label>
-              <input type="text" id="search" placeholder="Search" />
-            </section>
-
-            <!-- Sort By Section -->
-            <div class="sort-options">
-              <label for="sortBy">Sort By:</label>
-              <select id="sortBy">
-                <option value="newest">Newest</option>
-                <option value="oldest">Oldest</option>
-                <option value="mostLiked">Most Liked</option>
-              </select>
-            </div>
           </div>
         </section>
       </article>
